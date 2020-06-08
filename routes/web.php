@@ -25,3 +25,7 @@ Route::post('/searchartist', 'ArtistController@zoek');
 
 Route::get('/concert');
 Route::get('/country');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
