@@ -1,0 +1,40 @@
+/* Hier komt custom CSS */
+body {
+    background-image: url('/img/background.jfif');
+    height: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-expand-sm {
+    background-color: black;
+}
+
+a {
+    color: white;
+}
+
+.btn-warning {
+    background-color: #631D76;
+    color: #FBFBFB;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    border-bottom: 2px solid orange;
+}
+
+a:hover {
+    color: orange;
+}
+
+#logo {
+    width: 12%
+}
+
+.middlelinks {
+    font-size: 20px;
+}
