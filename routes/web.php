@@ -25,3 +25,6 @@ Route::post('/searchartist', 'ArtistController@zoek');
 
 Route::get('/concert');
 Route::get('/country');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
