@@ -20,10 +20,10 @@ Route::get('/artist/{id}', 'ArtistController@show')->name('artist');
 Route::get('/song/{id}', 'SongController@show')->name('song');
 Route::get('/country/{id}', 'CountryController@show')->name('country');
 
-Route::post('/searchconcert', 'ConcertController@zoek');
+Route::any('/searchconcert', 'ConcertController@zoek')->name('searchconcert');
 Route::post('/searchartist', 'ArtistController@zoek');
 
-Route::get('/concert');
+Route::get('/concert')->name('concert');
 Route::get('/country');
 Auth::routes();
 

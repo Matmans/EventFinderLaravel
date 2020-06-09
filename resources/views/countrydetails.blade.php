@@ -16,62 +16,98 @@
                 <div class="row justify-content-center">
                     <div class="col-sm pb-5 d-flex flex-column">
                         <div class="h3 text-center mt-3 display-2">
+                            Artists
+                        </div>
+                        @foreach($artist as $a)
+                        <div class="card flex-row flex-wrap mb-3">
+                            <div class="card-header border-0 text-center">
+                                <img src="{{$a->piclink}}" alt="" 
+                                style="max-height:100px;max-width:100px;width: expression(this.width > 500 ? 500: true);">
+                            </div>
+                            <div class="card-block px-2 pt-3">                               
+                                <a href="/artist/{{$a->id}}">
+                                    <h4 class="card-title">{{$a->name}}</h4>
+                                </a>
+                                <a href="{{$a->facebooklink}}"><img src="../img/facebook.png" class="medialogo ml-3"></a>
+                                <a href="{{$a->twitterlink}}"><img src="../img/twitter.png" class="medialogo ml-3"></a>
+                                <a href="{{$a->youtubelink}}"><img src="../img/youtube.png" class="medialogo ml-3"></a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="card-footer w-100 text-muted">
+                                @guest 
+                                @else
+                                    <a><button class="btn btn-warning mb-3 mt-2">Add to favorites</button></a>
+                                @endguest
+                                <a href="/artist/{{$a->id}}">
+                                    <button class="btn btn-warning mb-3 mt-2">
+                                        View profile
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+
+                    <div class="col-sm pb-5 d-flex flex-column">
+                        <div class="h3 text-center mt-3 display-2">
                             Concerts
                         </div>
-                        <table>
-                            @foreach($concert as $c)
-                                <tr>
-                                    <td style="max-width:200px;" class="text-center">
-                                    <a href="/artist/{{$c->id}}">
-                                        <img src="{{$c->artist['piclink']}}"
-                                        style="max-height:100px;max-width:100px;width: expression(this.width > 500 ? 500: true);"><br />
-                                        {{$c->artist['name']}}
+                        @foreach($concert as $c)
+                            <div class="card flex-row flex-wrap mb-3">
+                                <div class="card-header border-0 text-center">
+                                    <img src="{{$c->artist['piclink']}}"
+                                        style="max-height:100px;max-width:100px;width: expression(this.width > 500 ? 500: true);">
+                                </div>
+                                <div class="card-block px-2 pt-3">
+                                    <a href="/artist/{{$c->artist['id']}}">
+                                        <h4 class="card-title">{{$c->artist['name']}}</h4>
                                     </a>
-                                    </td>
-                                    <td style="background-color:black;color:orange;">
+                                    <p>
                                         {{$c->location}}, {{$c->country['name']}} 
                                         <img src="../img/country/{{$country->name}}.png" 
                                             onerror="this.onerror=null; this.src='../img/country/Alt.png'" width="16px">  <br/>
                                         Date: {{date('d-m-Y', strtotime($c->date))}} <br/>
                                         Time: {{date('G:i', strtotime($c->date))}} u
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </table>
-                    </div>
-
-                    <div class="col-sm pb-5 d-flex flex-column">
-                        <div class="h3 text-center mt-3 display-2">
-                            Artists
-                        </div>
-                        <table class="noborders">
-                            @foreach($artist as $a)
-                                <tr>
-                                    <td class="text-center">
-                                        <a href="/artist/{{$a->id}}">
-                                            <img src="{{$a->piclink}}"
-                                            style="max-height:100px;max-width:100px;width: expression(this.width > 500 ? 500: true);"><br />
-                                            {{$a->name}}
+                                    </p>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="card-footer w-100 text-muted">
+                                    @guest
+                                                
+                                    @else
+                                        <a>
+                                            <button class="btn btn-warning mb-3 mt-2">
+                                                Add to Wishlist
+                                            </button>
                                         </a>
-                                    </td>
-                                    <td class="text-center">
-                                        <a href="{{$a->facebooklink}}" target="_blank">
-                                            <img src="../img/facebook.png"
-                                            style="max-height:30px;max-width:30px;width: expression(this.width > 500 ? 500: true);">
-                                        </a>
-                                        <a href="{{$a->twitterlink}}" target="_blank">
-                                            <img src="../img/twitter.png"
-                                            style="max-height:30px;max-width:30px;width: expression(this.width > 500 ? 500: true);">
-                                        </a>
-                                        <a href="{{$a->youtubelink}}" target="_blank">
-                                            <img src="../img/youtube.png"
-                                            style="max-height:30px;max-width:30px;width: expression(this.width > 500 ? 500: true);">
-                                        </a>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </table>
-                    </div>
+                                        @if($c->ticket_status_id == 1)
+                                            <button class="btn btn-warning disabled mb-3 mt-2">
+                                                NOT YET AVAILABLE
+                                            </button>
+                                        @elseif($c->ticket_status_id == 2)
+                                            <a href="https://{{$c['ticketlink']}}">
+                                                <button class="btn btn-warning mb-3 mt-2">
+                                                    BUY YOUR TICKETS NOW
+                                                </button>
+                                            </a>
+                                        @elseif($c->ticket_status_id == 3)
+                                            <button class="btn btn-warning disabled mb-3 mt-2">
+                                                SOLD OUT
+                                            </button>
+                                        @elseif($c->ticket_status_id == 4)
+                                            <button class="btn btn-warning disabled mb-3 mt-2">
+                                                CANCELLED
+                                            </button>  
+                                        @else
+                                            <button class="btn btn-warning disabled mb-3 mt-2">
+                                                NO INFO YET
+                                            </button> 
+                                        @endif 
+                                    @endguest
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>          
                 </div>
             </div>
         </div>

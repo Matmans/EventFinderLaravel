@@ -104,3 +104,22 @@ table, th, td {
     border-top-right-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
 }
+
+.card {
+    border-color: orange;
+    background-color: black;
+}
+
+.card > .card-block > h4 {
+    color: orange;
+}
+
+.card > .card-header {
+    width: 150px;
+}
+
+
+.medialogo {
+    max-height: 30px;
+    max-width: 30px;;
+}

@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Country;
 use App\Concert;
 use App\Artist;
+use App\User;
+use App\Fav_artist;
+use auth;
 
 class CountryController extends Controller
 {
@@ -45,7 +48,8 @@ class CountryController extends Controller
                     return view('countrydetails', [
                         'country' => $country,
                         'concert' => $concert,
-                        'artist' => $artist
+                        'artist' => $artist,
+                        'favartist' => []
                     ]);
                 }
             }

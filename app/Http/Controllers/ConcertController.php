@@ -32,32 +32,22 @@ class ConcertController extends Controller
                     if ($zoekcountry == 0)
                     {
                         $concert = Concert::where('artist_id', $artistid)->get();
-                        $concertid = Concert::where('artist_id', $artistid)->pluck('id');
-
-                        $ticket = Ticket::where('concert_id', $concertid)->first();
 
                         return view('/concert', 
                         [
                             'concert' => $concert,
                             'artist' => $artist,
-                            'ticket' => $ticket
                         ]);
                     }
                     /* Concerten tonen van het geselecteerde land */
                     else
                     {
                         $concert = Concert::where('artist_id',$artistid)->where('country_id',$zoekcountry)->get();
-                        error_log($concert = Concert::where('artist_id',$artistid)->where('country_id',$zoekcountry)->get());
-
-                        $concertid = Concert::where('artist_id',$artistid)->where('country_id',$zoekcountry)->pluck('id');
-
-                        $ticket = Ticket::where('concert_id', $concertid)->first();
 
                         return view('/concert', 
                         [
                             'concert' => $concert,
                             'artist' => $artist,
-                            'ticket' => $ticket
                         ]);
                     }
                 }

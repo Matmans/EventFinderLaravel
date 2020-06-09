@@ -18,10 +18,11 @@ class CreateConcertTable extends Migration
             $table->integer('artist_id');
             $table->string('location');
             $table->integer('country_id');
-            $table->date('date');
+            $table->dateTime('date');
             $table->boolean('meetandgreet');
             $table->boolean('merchandise');
-            $table->string('googlemaps');
+            $table->string('ticketlink');
+            $table->integer('ticket_status_id');
             $table->timestamps();
         });
     }
