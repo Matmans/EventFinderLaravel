@@ -104,3 +104,33 @@ table, th, td {
     border-top-right-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
 }
+
+
+.card-header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.card-body {
+    background-color: rgb(78, 10, 10);
+    color: white;
+}
+
+.select-pad {
+    margin-bottom: 16px;
+}
+
+.dash {
+
+    text-align: center;
+    font-size: large;
+
+}
+
+.subtitle {
+    padding-top: 15px;
+    text-align: center;
+    font-size: x-large;
+}

@@ -26,7 +26,7 @@
                         </div>
 
 
-                        <select class="custom-select{{ $errors->has('country_id') ? ' is-invalid' : '' }}" id="country_id" name="country_id">
+                        <select class=" select-pad custom-select{{ $errors->has('country_id') ? ' is-invalid' : '' }}" id="country_id" name="country_id">
                             <option value="" selected>Choose country</option>
                             @foreach($country as $c)
                                 <option value="{{ $c->id }}">{{ $c->name }}</option>
@@ -74,7 +74,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-warning">
                                     {{ __('Register') }}
                                 </button>
                             </div>
