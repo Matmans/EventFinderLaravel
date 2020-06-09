@@ -100,6 +100,7 @@ table, th, td {
     text-shadow: 0 0 5px black, 0 0 5px black;
 }
 
-input {
-    border-radius: 0 1em 1em 0 !important;
+.input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
 }

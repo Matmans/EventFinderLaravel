@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
-    <div class="text-center">
+    <div class="text-center content-align-center">
         <h1 class="display-4" id="titel">
             SEARCH FOR UPCOMING EVENTS!
         </h1>
@@ -13,8 +13,8 @@
                 <div class="input-group active-cyan-3 active-cyan-4 pr-5 pl-5">
                 <input type="text" class="form-control" name="zoek" placeholder="Search here for an artist"> <br/>
             </div>
-            <div class="form-group">
-                <select name="zoekcountry" id="zoekcountry">
+            <div class="form-group row justify-content-center">
+                <select class="form-control" name="zoekcountry" id="zoekcountry" style="width:30%;">
                     <option value="0">Filter by country</option>
                     @foreach($country as $c)
                         <option value="{{$c->id}}">{{$c->name}}</option>

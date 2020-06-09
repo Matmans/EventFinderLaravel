@@ -11,21 +11,31 @@ class ArtistController extends Controller
 {
     public function show($id) {
         try {
+            /* Check of de id een nummer is */
             if(is_numeric($id))
             {
                 $artist = Artist::find($id);
-                $artistid = $artist->id;
+                /* Als er geen artiest gevonden is */
+                if(empty($artist))
+                {
+                    return view('/error');
+                }
+                /* Als er een artiest is gevonden */
+                else {
+                    $artistid = $artist->id;
 
-                $song = Song::where('artist_id',$artistid)->get();
+                    $song = Song::where('artist_id',$artistid)->get();
 
-                $concert = Concert::where('artist_id',$artistid)->get();
+                    $concert = Concert::where('artist_id',$artistid)->get();
 
-                return view('artiestdetails', [
-                    'artist' => $artist,
-                    'song' => $song,
-                    'concert' => $concert
-                ]);
+                    return view('artiestdetails', [
+                        'artist' => $artist,
+                        'song' => $song,
+                        'concert' => $concert
+                    ]);
+                }
             }
+            /* Als de id geen nummer is, error */
             else {
                 return view ('/error');
             }          
