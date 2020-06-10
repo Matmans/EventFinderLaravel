@@ -56,7 +56,6 @@ a.desctable,
 .breadcrumb a,
 .breadcrumb li,
 label,
-.pagination>li>a,
 .dataTables_wrapper .dataTables_info,
 .detail_info h4,
 .detail_info p {
@@ -136,4 +135,9 @@ select,
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 10em;
+}
+
+.pagination>li>a {
+    color: white !important;
+    background: transparent;
 }
