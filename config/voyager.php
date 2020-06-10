@@ -12,10 +12,23 @@ return [
 
     'user' => [
         'add_default_role_on_register' => true,
-        'default_role'                 => 'user',
+        'default_role'                 => 'admin',
         'default_avatar'               => 'users/default.png',
         'redirect'                     => '/admin',
     ],
+
+    'song' => [
+        'namespace'                     => App\Song::class,
+    ],
+
+    'artist' => [
+        'namespace'                     => App\Artist::class,
+    ],
+
+    'genre' => [
+        'namespace'                     => App\Genre::class,
+    ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -185,7 +198,7 @@ return [
 
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
-        //'css/custom.css',
+        'css/custom.css',
     ],
 
     'additional_js' => [

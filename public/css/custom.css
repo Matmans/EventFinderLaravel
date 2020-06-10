@@ -1,0 +1,139 @@
+body {
+    color: white;
+}
+
+.voyager .navbar,
+.voyager .navbar.navbar-default {
+    background: rgba(0, 0, 0, 0.582);
+}
+
+.navbar-brand {
+    background-color: orange;
+}
+
+.navbar-brand:hover {
+    background-color: darkorange !important;
+}
+
+.dimmer {
+    background-color: black !important;
+    color: white;
+}
+
+.app-container {
+    background-image: url(https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.panel,
+#toolbar,
+#left,
+#right {
+    background: rgba(0, 0, 0, 0.651) !important;
+    color: white !important;
+}
+
+table.dataTable,
+table.dataTable td,
+table.dataTable th {
+    background-color: rgba(0, 0, 0, 0.795) !important;
+    color: white !important;
+}
+
+.table-striped,
+.table-striped>tbody>tr:nth-of-type(odd),
+.table>thead>tr>th,
+table.dataTable tbody tr {
+    background-color: rgba(0, 0, 0, 0.795) !important;
+    color: white !important;
+}
+
+a.desctable,
+.page-title,
+.breadcrumb a,
+.breadcrumb li,
+label,
+.pagination>li>a,
+.dataTables_wrapper .dataTables_info,
+.detail_info h4,
+.detail_info p {
+    color: white !important;
+}
+
+.row-dd:hover {
+    background-color: rgba(0, 0, 0, 0.527) !important;
+}
+
+.panel-title,
+.breadcrumb {
+    background-color: purple !important;
+}
+
+.btn.btn-primary,
+.file_link.selected {
+    background: orange;
+}
+
+select,
+.fake-table-hd {
+    color: black;
+}
+
+.app-footer {
+    background: black !important;
+}
+
+.alert-info {
+    display: none !important;
+}
+
+.btn-success {
+    background: purple !important;
+}
+
+#toolbar,
+#left,
+#right {
+    background: rgba(0, 0, 0, 0.616) !important;
+}
+
+.detail_img i {
+    background: orange !important;
+}
+
+#files li .file_link.selected,
+#files li .file_link:hover {
+    background: orange !important;
+    border-color: orange !important;
+    color: #fff;
+}
+
+#toolbar .btn.btn-primary,
+#toolbar .btn.btn-primary:hover {
+    background: purple;
+    border: 1px solid purple;
+}
+
+.btn.btn-warning {
+    background: purple !important;
+    border: 1px solid purple !important;
+}
+
+.pagination .active>a {
+    background: orange !important;
+}
+
+#site {
+    background: rgba(0, 0, 0, 0.192) !important;
+}
+
+.display-4 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10em;
+}
