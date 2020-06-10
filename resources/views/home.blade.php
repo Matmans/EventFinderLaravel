@@ -23,9 +23,90 @@
                     <div class="row subtitle">
                     <div class="col-sm">
                          Favourite Artists
+
+                         @foreach($favartist as $fa)
+                            <h1>{{$fa->artist['name']}}
+                            <a href="/favartistdelete/{{Auth::user()->id}}&{{$fa['artist_id']}}">
+                                <button class="btn btn-warning mb-3 mt-2">
+                                    Remove from favorites
+                                </button>
+                            </a>
+                         @endforeach
                     </div>
                     <div class="col-sm">
                         Concert Wishlist
+
+                        @foreach($concert_wishlist as $cw)
+                        <div class="card flex-row flex-wrap mb-3" style="width:100%;">
+                            <div class="card-body">
+                                <img class="card-img-top rounded" src="{{$cw->concert->artist['piclink']}}"
+                                    style="max-height:100px;max-width:100px;width: expression(this.width > 500 ? 500: true);">
+                            </div>
+                                <div class="card-block px-2 pt-3">
+                                    <h4 class="card-title">
+                                        {{$cw->concert->artist['name']}} @ <br/>
+                                        {{$cw->concert->location}}, {{$cw->concert->country['name']}} 
+                                        <img src="../img/country/{{$cw->concert->country['name']}}.png" 
+                                            onerror="this.onerror=null; this.src='../img/country/Alt.png'" width="32px">
+                                    </h4>
+                                    <p>
+                                        Date: {{date('d F Y', strtotime($cw->concert->date))}} <br/>
+                                        Time: {{date('G:i', strtotime($cw->concert->date))}}
+                                    </p>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="card-footer w-100 text-muted">
+                                        @if($cw->concert->ticket_status_id == 1)
+                                            <a href="/concertwishlistdelete/{{Auth::user()->id}}&{{$cw['concert_id']}}">
+                                                <button class="btn btn-warning mb-3 mt-2">
+                                                    Remove from Wishlist
+                                                </button>
+                                            </a>
+                                            <button class="btn btn-warning disabled mb-3 mt-2">
+                                                NOT YET AVAILABLE
+                                            </button>
+                                        @elseif($cw->concert->ticket_status_id == 2)
+                                            <a href="/concertwishlistdelete/{{Auth::user()->id}}&{{$cw['concert_id']}}">
+                                                <button class="btn btn-warning mb-3 mt-2">
+                                                    Remove from Wishlist
+                                                </button>
+                                            </a>
+                                            <a href="https://{{$cw->concert['ticketlink']}}">
+                                                <button class="btn btn-warning mb-3 mt-2">
+                                                    BUY YOUR TICKETS NOW
+                                                </button>
+                                            </a>   
+                                        @elseif($cw->concert->ticket_status_id == 3)
+                                            <a href="/concertwishlistdelete/{{Auth::user()->id}}&{{$cw->concert['id']}}">
+                                                <button class="btn btn-warning mb-3 mt-2">
+                                                    Remove from Wishlist
+                                                </button>
+                                            </a>
+                                            <button class="btn btn-warning disabled mb-3 mt-2">
+                                                SOLD OUT
+                                            </button>
+                                        @elseif($cw->concert->ticket_status_id == 4)
+                                            <a href="/concertwishlistdelete/{{Auth::user()->id}}&{{$cw->concert['id']}}">
+                                                <button class="btn btn-warning mb-3 mt-2">
+                                                    Remove from Wishlist
+                                                </button>
+                                            </a>
+                                            <button class="btn btn-warning disabled mb-3 mt-2">
+                                                CANCELLED
+                                            </button>  
+                                        @elseif($cw->concert->ticket_status_id == 0)
+                                            <a href="/concertwishlistdelete/{{Auth::user()->id}}&{{$cw->concert['id']}}">
+                                                <button class="btn btn-warning mb-3 mt-2">
+                                                    Remove from Wishlist
+                                                </button>
+                                            </a>
+                                            <button class="btn btn-warning disabled mb-3 mt-2">
+                                                NO INFO YET
+                                            </button> 
+                                        @endif 
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                     </div>
                 </div>

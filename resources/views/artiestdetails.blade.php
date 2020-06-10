@@ -5,7 +5,7 @@
         <div class="row text-white justify-content-center vollelengte ml-1">
             <!-- Linkse kolom voor artiest -->
             <div class="col-sm mt-3 pb-5 d-flex flex-column text-center">
-            <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">
                             <a href="/artist/{{$artist['id']}}">    
@@ -30,7 +30,12 @@
                         <li class="list-group-item">
                             Genre: {{$artist->genre['name']}}
                         </li>
-                    </ul>
+                        <li class="list-group-item">
+                            <a href="{{$artist->facebooklink}}" target="_blank"><img src="../img/facebook.png" class="medialogo"></a>
+                            <a href="{{$artist->twitterlink}}" target="_blank"><img src="../img/twitter.png" class="medialogo ml-3"></a>
+                            <a href="{{$artist->youtubelink}}" target="_blank"><img src="../img/youtube.png" class="medialogo ml-3"></a>
+                        </li>
+                    </ul> 
                     <div class="card-body">
                         @auth
                             @if($favcheck == 0)
@@ -51,7 +56,7 @@
                 </div>
             </div>
             <div class="col-sm mt-3 pb-5 d-flex flex-column">
-            <div class="card" style="width:100%;">
+            <div class="card blackcard" style="width:100%;">
                     <div class="card-body">
                         <h5 class="card-title text-center">
                             Songs

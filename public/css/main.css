@@ -113,10 +113,6 @@ table, th, td {
     font-size: xx-large;
 }
 
-.card-body {
-    background-color: rgb(78, 10, 10);
-    color: white;
-}
 
 .select-pad {
     margin-bottom: 16px;
@@ -133,4 +129,28 @@ table, th, td {
     padding-top: 15px;
     text-align: center;
     font-size: x-large;
+}
+
+.medialogo {
+    max-height: 30px;
+    max-width: 30px;;
+}
+
+.list-group-item {
+    background-color: black !important;
+    color: white !important;
+    border-color: orange;
+}
+
+.card {
+    border-color: orange;
+    background-color: black;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    color: white;
+}
+
+.card > .card-block > h4 {
+    color: orange;
 }

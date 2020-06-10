@@ -28,7 +28,7 @@
                                 <a href="/artist/{{$a->id}}">
                                     <h4 class="card-title">{{$a->name}}</h4>
                                 </a>
-                                <a href="{{$a->facebooklink}}"><img src="../img/facebook.png" class="medialogo ml-3"></a>
+                                <a href="{{$a->facebooklink}}"><img src="../img/facebook.png" class="medialogo"></a>
                                 <a href="{{$a->twitterlink}}"><img src="../img/twitter.png" class="medialogo ml-3"></a>
                                 <a href="{{$a->youtubelink}}"><img src="../img/youtube.png" class="medialogo ml-3"></a>
                             </div>
@@ -79,8 +79,8 @@
                                         {{$c->location}}, {{$c->country['name']}} 
                                         <img src="../img/country/{{$country->name}}.png" 
                                             onerror="this.onerror=null; this.src='../img/country/Alt.png'" width="16px">  <br/>
-                                        Date: {{date('d-m-Y', strtotime($c->date))}} <br/>
-                                        Time: {{date('G:i', strtotime($c->date))}} u
+                                        Date: {{date('d F Y', strtotime($c->date))}} <br/>
+                                        Time: {{date('G:i', strtotime($c->date))}}
                                     </p>
                                 </div>
                                 <div class="w-100"></div>
