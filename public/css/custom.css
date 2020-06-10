@@ -71,13 +71,19 @@ label,
     background-color: purple !important;
 }
 
+.panel-footer {
+    background: black;
+    text-align: center;
+}
+
 .btn.btn-primary,
 .file_link.selected {
     background: orange;
 }
 
 select,
-.fake-table-hd {
+.fake-table-hd,
+#files li .file_link {
     color: black;
 }
 
@@ -95,7 +101,8 @@ select,
 
 #toolbar,
 #left,
-#right {
+#right,
+.navbar-nav.navbar-right li.dropdown.open .dropdown-menu {
     background: rgba(0, 0, 0, 0.616) !important;
 }
 
@@ -140,4 +147,17 @@ select,
 .pagination>li>a {
     color: white !important;
     background: transparent;
+}
+
+.select2-results__option {
+    color: black;
+}
+
+.toggle-group .btn,
+.toggle-group .btn.btn-default {
+    color: black !important;
+}
+
+.voyager-folder:before {
+    color: purple !important;
 }
