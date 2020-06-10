@@ -105,30 +105,32 @@ table, th, td {
     border-bottom-right-radius: 8px !important;
 }
 
-.card {
-    border-color: orange;
+
+.card-header {
     background-color: black;
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
+    color: white;
+    text-align: center;
+    font-size: xx-large;
 }
 
-.card > .card-block > h4 {
-    color: orange;
+.card-body {
+    background-color: rgb(78, 10, 10);
+    color: white;
 }
 
-.card > .card-header {
-    width: 150px;
+.select-pad {
+    margin-bottom: 16px;
 }
 
-.list-group-item {
-    background-color: black !important;
-    color: white !important;
-    border-color: orange;
+.dash {
+
+    text-align: center;
+    font-size: large;
+
 }
 
-
-.medialogo {
-    max-height: 30px;
-    max-width: 30px;;
+.subtitle {
+    padding-top: 15px;
+    text-align: center;
+    font-size: x-large;
 }
