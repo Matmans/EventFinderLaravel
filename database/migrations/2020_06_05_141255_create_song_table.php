@@ -19,7 +19,7 @@ class CreateSongTable extends Migration
             $table->integer('artist_id');
             $table->integer('genre_id');
             $table->string('youtubelink',120);
-            $table->string('lyrics',1000);
+            $table->string('lyrics',10000);
             $table->string('awards',300);
             $table->timestamps();
         });

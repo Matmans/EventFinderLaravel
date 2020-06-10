@@ -108,6 +108,9 @@ table, th, td {
 .card {
     border-color: orange;
     background-color: black;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
 }
 
 .card > .card-block > h4 {
@@ -116,6 +119,12 @@ table, th, td {
 
 .card > .card-header {
     width: 150px;
+}
+
+.list-group-item {
+    background-color: black !important;
+    color: white !important;
+    border-color: orange;
 }
 
 

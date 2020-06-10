@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Artist;
 use App\Song;
 use App\Concert;
+use App\Fav_artist;
+use App\User;
+use auth;
 
 class ArtistController extends Controller
 {
@@ -28,10 +31,42 @@ class ArtistController extends Controller
 
                     $concert = Concert::where('artist_id',$artistid)->get();
 
+                    if(Auth::check())
+                    {
+                        $currentuserid = Auth::user()->id;
+                        $favartist = Fav_artist::where('user_id',$currentuserid)->where('artist_id',$id)->first();
+                        
+                        if (empty($favartist)){
+                            $favcheck = 0;
+                        }
+                        else {
+                            $favcheck = 1;
+                        }
+
+                        return view('artiestdetails', [
+                            'artist' => $artist,
+                            'song' => $song,
+                            'concert' => $concert,
+                            'favcheck' => $favcheck
+                        ]);
+                    }
+                    else {
+                        $favcheck = 2;
+                        return view('artiestdetails', [
+                            'artist' => $artist,
+                            'song' => $song,
+                            'concert' => $concert,
+                            'favcheck' => $favcheck
+                        ]);
+                    }
+
+                    
+
                     return view('artiestdetails', [
                         'artist' => $artist,
                         'song' => $song,
-                        'concert' => $concert
+                        'concert' => $concert,
+                        'favcheck' => $favcheck
                     ]);
                 }
             }

@@ -7,6 +7,9 @@ use App\Concert;
 use App\Artist;
 use App\Ticket;
 use App\Country;
+use App\User;
+use App\Fav_artist;
+use auth;
 
 class ConcertController extends Controller
 {
@@ -33,22 +36,72 @@ class ConcertController extends Controller
                     {
                         $concert = Concert::where('artist_id', $artistid)->get();
 
-                        return view('/concert', 
-                        [
-                            'concert' => $concert,
-                            'artist' => $artist,
-                        ]);
+                        if(Auth::check())
+                        {
+                            $currentuserid = Auth::user()->id;
+                            $favartist = Fav_artist::where('user_id',$currentuserid)->where('artist_id',$artistid)->first();
+
+                            if (empty($favartist)){
+                                $favcheck = 0;
+                            }
+                            else {
+                                $favcheck = 1;
+                            }
+
+                            return view('/concert', 
+                            [
+                                'concert' => $concert,
+                                'artist' => $artist,
+                                'favcheck' => $favcheck,
+                            ]);
+                        }
+                        else 
+                        {
+                            $favcheck = 2;
+
+                            return view('/concert', 
+                            [
+                                'concert' => $concert,
+                                'artist' => $artist,
+                                'favcheck' => $favcheck,
+                            ]);
+                        }
                     }
                     /* Concerten tonen van het geselecteerde land */
                     else
                     {
                         $concert = Concert::where('artist_id',$artistid)->where('country_id',$zoekcountry)->get();
 
-                        return view('/concert', 
-                        [
-                            'concert' => $concert,
-                            'artist' => $artist,
-                        ]);
+                        if(Auth::check())
+                        {
+                            $currentuserid = Auth::user()->id;
+                            $favartist = Fav_artist::where('user_id',$currentuserid)->where('artist_id',$artistid)->first();
+
+                            if (empty($favartist)){
+                                $favcheck = 0;
+                            }
+                            else {
+                                $favcheck = 1;
+                            }
+
+                            return view('/concert', 
+                            [
+                                'concert' => $concert,
+                                'artist' => $artist,
+                                'favcheck' => $favcheck,
+                            ]);
+                        }
+                        else 
+                        {
+                            $favcheck = 2;
+
+                            return view('/concert', 
+                            [
+                                'concert' => $concert,
+                                'artist' => $artist,
+                                'favcheck' => $favcheck,
+                            ]);
+                        }
                     }
                 }
             }

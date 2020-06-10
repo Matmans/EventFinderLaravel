@@ -3,10 +3,13 @@
 @section('content')
     <div class="container-fluid">
         <div class="row text-white justify-content-center vollelengte ml-1">
-            <div class="col-sm mt-3 pb-3 d-flex flex-column justify-content-start">
-                <img src="{{$song->artist->piclink}}" style="max-height:150px;max-width:150px;width: expression(this.width > 500 ? 500: true);">
+            <div class="col-sm-2 mt-3 pb-3 d-flex flex-column justify-content-start">
+                <a href="/artist/{{$song->artist['id']}}"> 
+                    <img src="{{$song->artist->piclink}}" 
+                        style="max-height:150px;max-width:150px;width: expression(this.width > 500 ? 500: true);">
+                </a>
             </div>
-            <div class="col-lg mt-3 d-flex flex-column justify-content-center">
+            <div class="col-lg-8 mt-3 d-flex flex-column justify-content-center">
                 <div class="h3 text-center mt-3 display-2">
                     {{$song->name}}
                 </div>
@@ -14,7 +17,7 @@
                     <a href="/artist/{{$song->artist['id']}}">{{$song->artist['name']}}</a>
                 </div>
             </div>
-            <div class="col-sm mt-3 pb-3 d-flex flex-column text-right">
+            <div class="col-sm-2 mt-3 pb-3 d-flex flex-column text-right">
                 
             </div>
         </div>
