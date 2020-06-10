@@ -9,6 +9,7 @@ use App\Ticket;
 use App\Country;
 use App\User;
 use App\Fav_artist;
+use App\Concert_wishlist;
 use auth;
 
 class ConcertController extends Controller
@@ -40,6 +41,7 @@ class ConcertController extends Controller
                         {
                             $currentuserid = Auth::user()->id;
                             $favartist = Fav_artist::where('user_id',$currentuserid)->where('artist_id',$artistid)->first();
+                            $concert_wishlist = Concert_Wishlist::where('user_id',$currentuserid)->get();
 
                             if (empty($favartist)){
                                 $favcheck = 0;
@@ -53,6 +55,7 @@ class ConcertController extends Controller
                                 'concert' => $concert,
                                 'artist' => $artist,
                                 'favcheck' => $favcheck,
+                                'concert_wishlist' => $concert_wishlist
                             ]);
                         }
                         else 

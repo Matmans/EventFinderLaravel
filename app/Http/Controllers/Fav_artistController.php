@@ -32,7 +32,7 @@ class Fav_artistController extends Controller
             return view('/error');
         }
     }
-    
+
     public function delete($user_id,$artist_id) {
         try {
             if(is_numeric($user_id) && is_numeric($artist_id))
