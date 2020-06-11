@@ -1,3 +1,5 @@
+<!-- Dit is de layout die bijna overal wordt gebruikt -->
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -26,6 +28,7 @@
 </head>
 <body>
     <div id="app">
+    <!-- Navbar vanboven -->
         <nav class="navbar navbar-expand-sm navbar-default justify-content-between mb-0">
             <div class="container">
             <a class="navbar-brand" href="/"><img id="logo" src="../img/logo.png"></a>

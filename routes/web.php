@@ -23,11 +23,11 @@ Route::get('/country/{id}', 'CountryController@show')->name('country');
 Route::any('/searchconcert', 'ConcertController@zoek')->name('searchconcert');
 Route::post('/searchartist', 'ArtistController@zoek');
 
-Route::any('/favartistadd/{user_id}&{artist_id}', 'Fav_artistController@check');
-Route::any('/favartistdelete/{user_id}&{artist_id}', 'Fav_artistController@delete');
+Route::any('/favartistadd/{artist_id}', 'Fav_artistController@check');
+Route::any('/favartistdelete/{artist_id}', 'Fav_artistController@delete');
 
-Route::any('/concertwishlistadd/{user_id}&{concert_id}', 'Concert_wishlistController@check');
-Route::any('/concertwishlistdelete/{user_id}&{concert_id}', 'Concert_wishlistController@delete');
+Route::any('/concertwishlistadd/{concert_id}', 'Concert_wishlistController@check');
+Route::any('/concertwishlistdelete/{concert_id}', 'Concert_wishlistController@delete');
 
 Auth::routes();
 

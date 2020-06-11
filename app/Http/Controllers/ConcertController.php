@@ -10,6 +10,7 @@ use App\Country;
 use App\User;
 use App\Fav_artist;
 use App\Concert_wishlist;
+use Carbon\Carbon;
 use auth;
 
 class ConcertController extends Controller
@@ -39,7 +40,7 @@ class ConcertController extends Controller
                     /* Concerten tonen van alle landen */
                     if ($zoekcountry == 0)
                     {
-                        $concert = Concert::where('artist_id', $artistid)->orderBy('date')->get();
+                        $concert = Concert::where('artist_id', $artistid)->where('date','>',Carbon::now())->orderBy('date')->get();
 
                         if(Auth::check())
                         {
@@ -77,7 +78,7 @@ class ConcertController extends Controller
                     /* Concerten tonen van het geselecteerde land */
                     else
                     {
-                        $concert = Concert::where('artist_id',$artistid)->where('country_id',$zoekcountry)->orderBy('date')->get();
+                        $concert = Concert::where('artist_id',$artistid)->where('country_id',$zoekcountry)->where('date','>',Carbon::now())->orderBy('date')->get();
 
                         if(Auth::check())
                         {
