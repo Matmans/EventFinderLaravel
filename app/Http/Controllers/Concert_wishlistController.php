@@ -25,11 +25,26 @@ class Concert_wishlistController extends Controller
                     return redirect('/home');
                 }
                 else {
-                    return view('/error');
+                    $reason = "This concert is already on your wishlist";
+                    return view('/error', 
+                    [
+                        'reason' => $reason,
+                    ]);
                 }
             }
+            else {
+                $reason = "Wrong parameters.";
+                return view('/error', 
+                [
+                    'reason' => $reason,
+                ]);
+            }
         } catch (\exception $e) {
-            return view('/error');
+            $reason = "Something went wrong. Please try again.";
+            return view('/error', 
+            [
+                'reason' => $reason,
+            ]);
         }
     }
 
@@ -40,15 +55,30 @@ class Concert_wishlistController extends Controller
                 $Concert_wishlist = Concert_wishlist::where('user_id',$user_id)->where('concert_id',$concert_id)->first();
                 if (empty($Concert_wishlist))
                 {
-                    return view('/error');
+                    $reason = "Concert is not on your wishlist.";
+                    return view('/error', 
+                    [
+                        'reason' => $reason,
+                    ]);
                 }
                 else {
                     $Concert_wishlist->delete();
                     return redirect('/home');
                 }
             }
+            else {
+                $reason = "Wrong parameters.";
+                return view('/error', 
+                    [
+                        'reason' => $reason,
+                    ]);
+            }
         } catch (\exception $e) {
-            return view('/error');
+            $reason = "Something went wrong";
+            return view('/error', 
+            [
+                'reason' => $reason,
+            ]);
         }
     }
 }

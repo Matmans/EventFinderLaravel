@@ -26,7 +26,11 @@ class ConcertController extends Controller
                 $artistid = Artist::where('name', 'like', '%' . $zoek . '%')->pluck('id');
                 /* Return error als geen artiest gevonden is */
                 if(empty($artistid)){
-                    return view('/error');
+                    $reason = "No artist found";
+                    return view('/error', 
+                    [
+                        'reason' => $reason,
+                    ]);
                 }
                 else
                 {
@@ -35,7 +39,7 @@ class ConcertController extends Controller
                     /* Concerten tonen van alle landen */
                     if ($zoekcountry == 0)
                     {
-                        $concert = Concert::where('artist_id', $artistid)->get();
+                        $concert = Concert::where('artist_id', $artistid)->orderBy('date')->get();
 
                         if(Auth::check())
                         {
@@ -73,7 +77,7 @@ class ConcertController extends Controller
                     /* Concerten tonen van het geselecteerde land */
                     else
                     {
-                        $concert = Concert::where('artist_id',$artistid)->where('country_id',$zoekcountry)->get();
+                        $concert = Concert::where('artist_id',$artistid)->where('country_id',$zoekcountry)->orderBy('date')->get();
 
                         if(Auth::check())
                         {
@@ -113,7 +117,11 @@ class ConcertController extends Controller
                 /* Als er geen land is geselecteerd, fout terug geven (er is dus niks ingegeven of geselecteerd) */
                 if ($zoekcountry == 0)
                 {
-                    return view('/error');
+                    $reason = "You need to enter a name or select a country.";
+                    return view('/error', 
+                    [
+                        'reason' => $reason,
+                    ]);
                 }
                 else {
                     $id = $zoekcountry;
@@ -121,7 +129,11 @@ class ConcertController extends Controller
                 }
             }
         } catch (\exception $e) {
-            return view('/error');
+            $reason = "Something went wrong. Please try again.";
+            return view('/error', 
+            [
+                'reason' => $reason,
+            ]);
         }
     }
 }

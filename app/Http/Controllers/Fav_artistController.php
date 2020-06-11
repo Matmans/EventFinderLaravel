@@ -25,11 +25,27 @@ class Fav_artistController extends Controller
                     return redirect('/artist/'.$artist_id);
                 }
                 else {
-                    return view('/error');
+                    $reason = "Artist is already a favorite of yours.";
+                    return view('/error', 
+                    [
+                        'reason' => $reason,
+                    ]);
                 }
             }
+            else
+            {
+                $reason = "Wrong parameters";
+                return view('/error', 
+                [
+                    'reason' => $reason,
+                ]);
+            }
         } catch (\exception $e) {
-            return view('/error');
+            $reason = "Something went wrong. Try again.";
+            return view('/error', 
+            [
+                'reason' => $reason,
+            ]);
         }
     }
 
@@ -40,15 +56,31 @@ class Fav_artistController extends Controller
                 $favartist = Fav_artist::where('user_id',$user_id)->where('artist_id',$artist_id)->first();
                 if (empty($favartist))
                 {
-                    return view('/error');
+                    $reason = "Artist isn't on your favorites list.";
+                    return view('/error', 
+                    [
+                        'reason' => $reason,
+                    ]);
                 }
                 else {
                     $favartist->delete();
                     return redirect('/artist/'.$artist_id);
                 }
             }
+            else
+            {
+                $reason = "Wrong parameters";
+                return view('/error', 
+                [
+                    'reason' => $reason,
+                ]);
+            }
         } catch (\exception $e) {
-            return view('/error');
+            $reason = "Something went wrong. Please try again.";
+            return view('/error', 
+            [
+                'reason' => $reason,
+            ]);
         }
     }
 }

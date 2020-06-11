@@ -21,7 +21,11 @@ class ArtistController extends Controller
                 /* Als er geen artiest gevonden is */
                 if(empty($artist))
                 {
-                    return view('/error');
+                    $reason = "No artist found";
+                    return view('/error', 
+                    [
+                        'reason' => $reason,
+                    ]);
                 }
                 /* Als er een artiest is gevonden */
                 else {
@@ -29,7 +33,7 @@ class ArtistController extends Controller
 
                     $song = Song::where('artist_id',$artistid)->get();
 
-                    $concert = Concert::where('artist_id',$artistid)->get();
+                    $concert = Concert::where('artist_id',$artistid)->orderBy('date')->get();
 
                     if(Auth::check())
                     {
@@ -59,23 +63,22 @@ class ArtistController extends Controller
                             'favcheck' => $favcheck
                         ]);
                     }
-
-                    
-
-                    return view('artiestdetails', [
-                        'artist' => $artist,
-                        'song' => $song,
-                        'concert' => $concert,
-                        'favcheck' => $favcheck
-                    ]);
                 }
             }
             /* Als de id geen nummer is, error */
             else {
-                return view ('/error');
+                $reason = "Wrong parameters";
+                return view('/error', 
+                [
+                    'reason' => $reason,
+                ]);
             }          
         } catch (\exception $e) {
-            return view('/error');
+            $reason = "Something went wrong. Please try again.";
+            return view('/error', 
+            [
+                'reason' => $reason,
+            ]);
         }
     }
 }

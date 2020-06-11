@@ -49,6 +49,13 @@
                                 </button>
                             </a>
                             @endif
+                        @else
+                            You can add to favorites if you're a member<br/>
+                            <a href="/register" class="card-link">
+                                <button class="btn btn-warning mb-3 mt-2">
+                                    Register
+                                </button>
+                            </a>
                         @endauth
                     </div>
                 </div>
@@ -57,12 +64,22 @@
                     <div class="h3 text-center mt-3 display-2">
                         Concerts
                     </div>
-                    @foreach($concert as $c)
-                        <div class="card flex-row flex-wrap mb-3" style="width:100%;">
-                            <div class="card-header border-0 text-center">
-                                <img class="card-img-top rounded" 
-                                    src="https://dummyimage.com/100x100/FFA500/000000.png&text={{date('M', strtotime($c->date))}}+{{date('d', strtotime($c->date))}}" alt="Card image cap">
-                            </div>
+                    @if(count($concert) == 0)
+                        <diV class="text-center">
+                            <h3 class="errortitle">No concerts found<h/3>
+                        </div>
+                    @else
+                        @guest
+                            <a href="/register">
+                                <p class="errortitle">You can see tickets (and add to favorites) if you're a member with us</p>    
+                            </a>
+                        @endguest
+                        @foreach($concert as $c)
+                            <div class="card flex-row flex-wrap mb-3" style="width:100%;">
+                                <div class="card-header border-0 text-center">
+                                    <img class="card-img-top rounded" 
+                                        src="https://dummyimage.com/100x100/FFA500/000000.png&text={{date('M', strtotime($c->date))}}+{{date('d', strtotime($c->date))}}" alt="Card image cap">
+                                </div>
                                 <div class="card-block px-2 pt-3">
                                     <h4 class="card-title">
                                         {{$c->location}}, {{$c->country['name']}} 
@@ -71,7 +88,18 @@
                                     </h4>
                                     <p>
                                         Date: {{date('d F Y', strtotime($c->date))}} <br/>
-                                        Time: {{date('G:i', strtotime($c->date))}}
+                                        Time: {{date('G:i', strtotime($c->date))}} <br/>
+                                        @if($c->meetandgreet == 1)
+                                            Meet and greet: &check; <br/>
+                                        @else
+                                            Meet and greet: &#10060; <br/>
+                                        @endif
+                                        
+                                        @if($c->merchandise == 1)
+                                            Merch: &check;
+                                        @else
+                                            Merch: &#10060;
+                                        @endif
                                     </p>
                                 </div>
                                 <div class="w-100"></div>
@@ -137,10 +165,19 @@
                                             <button class="btn btn-warning disabled mb-3 mt-2">
                                                 SOLD OUT
                                             </button>
-                                        @elseif($c->ticket_status_id == 4)
+                                        @elseif($c->ticket_status_id == 4 && (count($concert_wishlist->where("concert_id", $c['id'])) == 0))
                                             <button class="btn btn-warning disabled mb-3 mt-2">
                                                 CANCELLED
-                                            </button>  
+                                            </button> 
+                                        @elseif($c->ticket_status_id == 4 && (count($concert_wishlist->where("concert_id", $c['id'])) !== 0))
+                                            <a href="/concertwishlistdelete/{{Auth::user()->id}}&{{$c['id']}}">
+                                                <button class="btn btn-warning mb-3 mt-2">
+                                                    Remove from Wishlist
+                                                </button>
+                                            </a>
+                                            <button class="btn btn-warning disabled mb-3 mt-2">
+                                                CANCELLED
+                                            </button>
                                         @elseif($c->ticket_status_id == 0 && (count($concert_wishlist->where("concert_id", $c['id'])) == 0))
                                             <a href="/concertwishlistadd/{{Auth::user()->id}}&{{$c['id']}}">
                                                 <button class="btn btn-warning mb-3 mt-2">
@@ -164,6 +201,7 @@
                                 </div>
                             </div>
                         @endforeach
+                    @endif
                 </table>
             </div>
         </div>

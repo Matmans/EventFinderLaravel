@@ -23,7 +23,11 @@ class CountryController extends Controller
                 'country' => $country,
             ]);
         } catch (\exception $e) {
-            return view('/error');
+            $reason = "Could not reach database";
+            return view('/error', 
+            [
+                'reason' => $reason,
+            ]);
         }
     }
 
@@ -37,7 +41,11 @@ class CountryController extends Controller
                 /* Checken of er een land is gevonden, anders error */
                 if(empty($country))
                 {
-                    return view('/error');
+                    $reason = "No country found";
+                    return view('/error', 
+                    [
+                        'reason' => $reason,
+                    ]);
                 }
                 /* Er is een land gevonden, doorsturen */
                 else
@@ -77,10 +85,18 @@ class CountryController extends Controller
             }
             /* Iemand heeft een id ingegeven die geen nummer is, error pagina */
             else {
-                return view('/error');
+                $reason = "Wrong parameters";
+                return view('/error', 
+                [
+                    'reason' => $reason,
+                ]);
             }
         } catch (\exception $e) {
-            return view('/error');
+            $reason = "Something went wrong. Please try again.";
+            return view('/error', 
+            [
+                'reason' => $reason,
+            ]);
         }
     }
 }
