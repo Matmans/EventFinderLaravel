@@ -44,7 +44,7 @@ class Concert_wishlistController extends Controller
                             $Concert_wishlist = new Concert_wishlist;
 
                             $Concert_wishlist->concert_id = $concert_id;
-                            $Concert_wishlist->user_id = $user_id;
+                            $Concert_wishlist->user_id = $currentuserid;
                             $Concert_wishlist->save();
 
                             return redirect('/home');

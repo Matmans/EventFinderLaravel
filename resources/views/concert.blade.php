@@ -95,6 +95,11 @@
                                     <!-- Country icon -->
                                     <img src="../img/country/{{$c->country['name']}}.png" 
                                         onerror="this.onerror=null; this.src='../img/country/Alt.png'" width="32px">
+                                    <!-- Als concert geannuleerd is, tonen we dit in de titel -->
+                                    @if($c->ticket_status_id == 4)
+                                        <br/>
+                                        <p class="cancelled">CANCELLED</p>
+                                    @endif
                                 </h4>
                                 <!-- Concert info -->
                                 <p>
@@ -181,19 +186,12 @@
                                             <button class="btn btn-warning disabled mb-3 mt-2">
                                                 SOLD OUT
                                             </button>
-                                        @elseif($c->ticket_status_id == 4 && (count($concert_wishlist->where("concert_id", $c['id'])) == 0))
-                                            <button class="btn btn-warning disabled mb-3 mt-2">
-                                                CANCELLED
-                                            </button> 
                                         @elseif($c->ticket_status_id == 4 && (count($concert_wishlist->where("concert_id", $c['id'])) !== 0))
                                             <a href="/concertwishlistdelete/{{$c['id']}}">
                                                 <button class="btn btn-warning mb-3 mt-2">
                                                     Remove from Wishlist
                                                 </button>
                                             </a>
-                                            <button class="btn btn-warning disabled mb-3 mt-2">
-                                                CANCELLED
-                                            </button>
                                         @elseif($c->ticket_status_id == 0 && (count($concert_wishlist->where("concert_id", $c['id'])) == 0))
                                             <a href="/concertwishlistadd/{{$c['id']}}">
                                                 <button class="btn btn-warning mb-3 mt-2">
