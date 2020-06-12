@@ -32,3 +32,7 @@ Route::any('/concertwishlistdelete/{concert_id}', 'Concert_wishlistController@de
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
