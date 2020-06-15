@@ -26,7 +26,7 @@
                         </div>
 
 
-                        <select class=" select-pad custom-select{{ $errors->has('country_id') ? ' is-invalid' : '' }}" id="country_id" name="country_id">
+                        <select class=" select-pad custom-select{{ $errors->has('country_id') ? ' is-invalid' : '' }}" id="country_id" name="country_id" required>
                             <option value="" selected>Choose country</option>
                             @foreach($country as $c)
                                 <option value="{{ $c->id }}">{{ $c->name }}</option>

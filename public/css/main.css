@@ -154,3 +154,7 @@ table, th, td {
 .card > .card-block > h4 {
     color: orange;
 }
+
+.customcard {
+        width: 100%;
+}
