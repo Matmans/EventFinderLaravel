@@ -17,8 +17,9 @@ class CreateArtistTable extends Migration
             $table->bigIncrements('id');
             $table->string('name',120);
             $table->year('formation');
-            $table->integer('genre_id');
-            $table->integer('country_id');
+            $table->unsignedBigInteger('genre_id');
+            $table->string('origin',120);
+            $table->unsignedBigInteger('country_id');
             $table->string('facebooklink',120);
             $table->string('twitterlink',120);
             $table->string('youtubelink',120);

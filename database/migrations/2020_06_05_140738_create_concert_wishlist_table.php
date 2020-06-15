@@ -15,8 +15,8 @@ class CreateConcertWishlistTable extends Migration
     {
         Schema::create('concert_wishlist', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
-            $table->integer('concert_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('concert_id');
             $table->timestamps();
         });
     }

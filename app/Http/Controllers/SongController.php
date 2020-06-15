@@ -7,6 +7,7 @@ use App\Song;
 
 class SongController extends Controller
 {
+    /* Song ophalen op basis van id */
     public function show($id) {
         try {
             /* Checken of er een nummer is ingegeven als id */
@@ -16,7 +17,11 @@ class SongController extends Controller
                 /* Als er geen nummer bestaat met deze id, foutmelding */
                 if(empty($song))
                 {
-                    return view('/error');
+                    $reason = "Song does not exist.";
+                    return view('/error', 
+                    [
+                        'reason' => $reason,
+                    ]);
                 }
                 /* Als er wel een nummer is gevonden, doorsturen */
                 else {
@@ -25,12 +30,21 @@ class SongController extends Controller
                     ]);
                 }
             }
-            /* Iemand probeert grappig te zijn en geeft zelf een id in zonder letters, dus terugsturen naar de error pagina */
+            /* Geen ID meegegeven, error */
             else {
-                return view('/error');
+                $reason = "Wrong parameters.";
+                return view('/error', 
+                [
+                    'reason' => $reason,
+                ]);
             }
+        /* Algemene error catch */
         } catch (\exception $e) {
-            return view('/error');
+            $reason = "Something went wrong. Please try again.";
+            return view('/error', 
+            [
+                'reason' => $reason,
+            ]);
         }
     }
 }

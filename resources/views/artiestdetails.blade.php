@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
-<div class="container-fluid">
+    <div class="container-fluid">
         <div class="row text-white justify-content-center vollelengte ml-1">
             <!-- Linkse kolom voor artiest -->
             <div class="col-sm mt-3 pb-5 d-flex flex-column text-center">
@@ -14,6 +14,7 @@
                         </h5>
                         <img class="card-img-top rounded" src="{{$artist->piclink}}" alt="Card image cap">
                     </div>
+                    <!-- Algemene info -->
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             Formation: {{$artist['formation']}}
@@ -36,40 +37,55 @@
                             <a href="{{$artist->youtubelink}}" target="_blank"><img src="../img/youtube.png" class="medialogo ml-3"></a>
                         </li>
                     </ul> 
+                    <!-- Hierin komen de buttons voor favorieten toe te voegen en verwijderen, alleen als gebruiker is ingelogd -->
                     <div class="card-body">
                         @auth
                             @if($favcheck == 0)
-                            <a href="/favartistadd/{{Auth::user()->id}}&{{$artist['id']}}" class="card-link">
+                            <a href="/favartistadd/{{$artist['id']}}" class="card-link">
                                 <button class="btn btn-warning mb-3 mt-2">
                                     Add to Favorites
                                 </button>
                             </a>
                             @elseif($favcheck == 1)
-                            <a href="/favartistdelete/{{Auth::user()->id}}&{{$artist['id']}}" class="card-link">
+                            <a href="/favartistdelete/{{$artist['id']}}" class="card-link">
                                 <button class="btn btn-warning mb-3 mt-2">
                                     Remove from Favorites
                                 </button>
                             </a>
                             @endif
+                        @else
+                            You can add to favorites if you're a member<br/>
+                            <a href="/register" class="card-link">
+                                <button class="btn btn-warning mb-3 mt-2">
+                                    Register
+                                </button>
+                            </a>
                         @endauth
                     </div>
                 </div>
             </div>
+            <!-- Rechtse kolom voor liedjes -->
             <div class="col-sm mt-3 pb-5 d-flex flex-column">
-            <div class="card blackcard" style="width:100%;">
+                <div class="card blackcard" style="width:100%;">
                     <div class="card-body">
                         <h5 class="card-title text-center">
                             Songs
                         </h5>
                     </div>
+                    <!-- Maakt een item voor iedere liedje -->
                     <ul class="list-group list-group-flush">
-                        @foreach($song as $s)
-                            <li class="list-group-item">
-                                <a href="/song/{{$s['id']}}">    
-                                    {{$s['name']}}
-                                </a>
-                            </li>
-                        @endforeach
+                        <!-- Check of er liedjes zijn -->
+                        @if(count($song) == 0)
+                            <h3 class="text-center pt-2 pb-1 errortitle">No songs registered yet</h3>
+                        @else
+                            @foreach($song as $s)
+                                <li class="list-group-item">
+                                    <a href="/song/{{$s['id']}}">    
+                                        {{$s['name']}}
+                                    </a>
+                                </li>
+                            @endforeach
+                        @endif
                     </ul>
                 </div>
             </div>

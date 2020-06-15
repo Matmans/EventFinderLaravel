@@ -158,3 +158,11 @@ table, th, td {
 .customcard {
         width: 100%;
 }
+
+.errortitle {
+    color: orange;
+}
+
+.cancelled {
+    color: red;
+}
