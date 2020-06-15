@@ -24,7 +24,7 @@
                             Formation: {{$artist['formation']}}
                         </li>
                         <li class="list-group-item">
-                            Origin: 
+                            Origin: {{$artist->origin}}<br/>
                             <a href="/country/{{$artist->country['id']}}">
                                 {{$artist->country['name']}} 
                                 <img src="../img/country/{{$artist->country['name']}}.png" 
