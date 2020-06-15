@@ -12,9 +12,10 @@ return [
 
     'user' => [
         'add_default_role_on_register' => true,
-        'default_role'                 => 'admin',
+        'default_role'                 => 'gebruiker',
         'default_avatar'               => 'users/default.png',
         'redirect'                     => '/admin',
+        'namespace'                    => App\User::class,
     ],
 
     'song' => [
@@ -38,6 +39,10 @@ return [
     | Here you can specify voyager controller settings
     |
     */
+
+    'additional_css' => [
+        'css\custom.css',
+    ],
 
     'controllers' => [
         'namespace' => 'TCG\\Voyager\\Http\\Controllers',

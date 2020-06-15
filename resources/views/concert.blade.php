@@ -125,92 +125,53 @@
                                 <div class="card-footer w-100 text-muted">
                                     <!-- We tonen wishlist en ticket buttons als de gebruiker ingelogd is -->
                                     @auth
-                                        <!-- De juiste buttons generen op basis van ticket_status_id en wishlist -->
-                                        <!-- Dit gaat NIET in 2 verschillende if's, anders staan men buttons niet correct naast mekaar -->
-                                        <!-- Er zit dan een hoogte verschil in van een halve button -->
-                                        @if($c->ticket_status_id == 1 && (count($concert_wishlist->where("concert_id", $c['id'])) == 0))
-                                            <a href="/concertwishlistadd/{{$c['id']}}">
-                                                <button class="btn btn-warning mb-3 mt-2">
-                                                    Add to Wishlist
-                                                </button>
-                                            </a>
+                                        <!-- De juiste buttons generen op basis van ticket_status_id -->
+                                        @if($c->ticket_status_id == 1)
+                                            
                                             <button class="btn btn-warning disabled mb-3 mt-2">
                                                 NOT YET AVAILABLE
                                             </button>
-                                        @elseif($c->ticket_status_id == 1 && (count($concert_wishlist->where("concert_id", $c['id'])) !== 0))
-                                            <a href="/concertwishlistdelete/{{$c['id']}}">
-                                                <button class="btn btn-warning mb-3 mt-2">
-                                                    Remove from Wishlist
-                                                </button>
-                                            </a>
-                                            <button class="btn btn-warning disabled mb-3 mt-2">
-                                                NOT YET AVAILABLE
-                                            </button>
-                                        @elseif($c->ticket_status_id == 2 && (count($concert_wishlist->where("concert_id", $c['id'])) == 0))
-                                            <a href="/concertwishlistadd/{{$c['id']}}">
-                                                <button class="btn btn-warning mb-3 mt-2">
-                                                    Add to Wishlist
-                                                </button>
-                                            </a>
-                                            <a href="https://{{$c['ticketlink']}}">
-                                                <button class="btn btn-warning mb-3 mt-2">
-                                                    BUY YOUR TICKETS NOW
-                                                </button>
-                                            </a>
-                                        @elseif($c->ticket_status_id == 2 && (count($concert_wishlist->where("concert_id", $c['id'])) !== 0))
-                                            <a href="/concertwishlistdelete/{{$c['id']}}">
-                                                <button class="btn btn-warning mb-3 mt-2">
-                                                    Remove from Wishlist
-                                                </button>
-                                            </a>
+                                        @elseif($c->ticket_status_id == 2)
                                             <a href="https://{{$c['ticketlink']}}">
                                                 <button class="btn btn-warning mb-3 mt-2">
                                                     BUY YOUR TICKETS NOW
                                                 </button>
                                             </a>   
-                                        @elseif($c->ticket_status_id == 3 && (count($concert_wishlist->where("concert_id", $c['id'])) == 0))
-                                            <a href="/concertwishlistadd/{{$c['id']}}">
-                                                <button class="btn btn-warning mb-3 mt-2 disabled">
-                                                    Add to Wishlist
-                                                </button>
-                                            </a>
+                                        @elseif($c->ticket_status_id == 3)
                                             <button class="btn btn-warning disabled mb-3 mt-2">
                                                 SOLD OUT
                                             </button>
-                                        @elseif($c->ticket_status_id == 3 && (count($concert_wishlist->where("concert_id", $c['id'])) !== 0))
-                                            <a href="/concertwishlistdelete/{{$c['id']}}">
-                                                <button class="btn btn-warning mb-3 mt-2">
-                                                    Remove from Wishlist
-                                                </button>
-                                            </a>
+                                        @elseif($c->ticket_status_id == 4) 
                                             <button class="btn btn-warning disabled mb-3 mt-2">
-                                                SOLD OUT
+                                                CANCELLED
                                             </button>
-                                        @elseif($c->ticket_status_id == 4 && (count($concert_wishlist->where("concert_id", $c['id'])) !== 0))
-                                            <a href="/concertwishlistdelete/{{$c['id']}}">
-                                                <button class="btn btn-warning mb-3 mt-2">
-                                                    Remove from Wishlist
-                                                </button>
-                                            </a>
-                                        @elseif($c->ticket_status_id == 0 && (count($concert_wishlist->where("concert_id", $c['id'])) == 0))
-                                            <a href="/concertwishlistadd/{{$c['id']}}">
-                                                <button class="btn btn-warning mb-3 mt-2">
-                                                    Add to Wishlist
-                                                </button>
-                                            </a>
-                                            <button class="btn btn-warning disabled mb-3 mt-2">
-                                                NO INFO YET
-                                            </button>
-                                        @elseif($c->ticket_status_id == 0 && (count($concert_wishlist->where("concert_id", $c['id'])) !==    0))
-                                            <a href="/concertwishlistdelete/{{$c['id']}}">
-                                                <button class="btn btn-warning mb-3 mt-2">
-                                                    Remove from Wishlist
-                                                </button>
-                                            </a>
+                                        @elseif($c->ticket_status_id == 0)
                                             <button class="btn btn-warning disabled mb-3 mt-2">
                                                 NO INFO YET
                                             </button> 
-                                        @endif 
+                                        @endif
+
+                                        <!-- Toevoegen aan / verwijderen van wishlist -->
+                                        <!-- CANCELLED concerten krijgen niet de optie om toegevoegd te worden aan wishlist -->
+                                        @if($c->ticket_status_id == 4 && (count($concert_wishlist->where("concert_id", $c['id'])) !== 0))
+                                            <a href="/concertwishlistdelete/{{$c['id']}}">
+                                                <button class="btn btn-warning mb-3 mt-2">
+                                                    Remove from Wishlist
+                                                </button>
+                                            </a>
+                                        @elseif($c->ticket_status_id != 4 && count($concert_wishlist->where("concert_id", $c['id'])) == 0)
+                                            <a href="/concertwishlistadd/{{$c['id']}}">
+                                                <button class="btn btn-warning mb-3 mt-2">
+                                                    Add to Wishlist
+                                                </button>
+                                            </a>
+                                        @elseif($c->ticket_status_id != 4 && count($concert_wishlist->where("concert_id", $c['id'])) != 0)
+                                            <a href="/concertwishlistdelete/{{$c['id']}}">
+                                                <button class="btn btn-warning mb-3 mt-2">
+                                                    Remove from Wishlist
+                                                </button>
+                                            </a>
+                                        @endif
                                     @endauth
                                 </div>
                             </div>

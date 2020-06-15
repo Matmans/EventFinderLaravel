@@ -15,8 +15,8 @@ class CreateFavArtistTable extends Migration
     {
         Schema::create('fav_artist', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
-            $table->integer('artist_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('artist_id');
             $table->timestamps();
         });
     }

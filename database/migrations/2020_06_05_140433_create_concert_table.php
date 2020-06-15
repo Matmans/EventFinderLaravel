@@ -15,14 +15,14 @@ class CreateConcertTable extends Migration
     {
         Schema::create('concert', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('artist_id');
+            $table->unsignedBigInteger('artist_id');
             $table->string('location');
-            $table->integer('country_id');
+            $table->unsignedBigInteger('country_id');
             $table->dateTime('date');
             $table->boolean('meetandgreet');
             $table->boolean('merchandise');
             $table->string('ticketlink');
-            $table->integer('ticket_status_id');
+            $table->unsignedBigInteger('ticket_status_id');
             $table->timestamps();
         });
     }
