@@ -2152,6 +2152,7 @@ class AddDataTable extends Migration
                 'facebooklink' => 'https://www.facebook.com/cagetheelephant/',
                 'twitterlink' => 'https://twitter.com/CageTheElephant',
                 'youtubelink' => 'https://www.youtube.com/user/cagetheelephant',
+                'spotifylink' => 'https://open.spotify.com/artist/26T3LtbuGT1Fu9m0eRq5X3',
                 'piclink' => 'https://www.dansendeberen.be/wp-content/uploads/cage-the-elephant-new-album-social-cues-neil-krug.jpg',
                 'created_at' => '2020-06-07 12:00:00'
             ]         
@@ -2166,6 +2167,7 @@ class AddDataTable extends Migration
                 'facebooklink' => 'https://www.facebook.com/maroon5/',
                 'twitterlink' => 'https://twitter.com/maroon5',
                 'youtubelink' => 'https://www.youtube.com/user/Maroon5',
+                'spotifylink' => 'https://open.spotify.com/artist/04gDigrS5kc9YWfZHwBETP',
                 'piclink' => 'https://upload.wikimedia.org/wikipedia/commons/1/19/Maroon_5%2C_2011.jpg',
                 'created_at' => '2020-06-07 12:00:00'
             ]         
@@ -2180,6 +2182,7 @@ class AddDataTable extends Migration
                 'facebooklink' => 'https://www.facebook.com/stormzyofficial/',
                 'twitterlink' => 'https://twitter.com/stormzy',
                 'youtubelink' => 'https://www.youtube.com/user/StormzyTV',
+                'spotifylink' => 'https://open.spotify.com/artist/2SrSdSvpminqmStGELCSNd',
                 'piclink' => 'https://d3s4rtoucjtwa6.cloudfront.net/artistes/1500-1575897914.jpg',
                 'created_at' => '2020-06-07 12:00:00'
             ]         
@@ -2194,6 +2197,7 @@ class AddDataTable extends Migration
                 'facebooklink' => 'https://www.facebook.com/thecoronasofficial/',
                 'twitterlink' => 'https://twitter.com/TheCoronas',
                 'youtubelink' => 'https://www.youtube.com/user/thecoronasrock',
+                'spotifylink' => 'https://open.spotify.com/artist/2tppd6KkhK4ULAd217Ecq1',
                 'piclink' => 'https://gratefulweb.com/sites/default/files/images/articles/vZdcZxcxZXc.jpg',
                 'created_at' => '2020-06-07 12:00:00'
             ]         
@@ -2208,6 +2212,7 @@ class AddDataTable extends Migration
                 'facebooklink' => 'https://www.facebook.com/theweeknd/',
                 'twitterlink' => 'https://twitter.com/theweeknd',
                 'youtubelink' => 'https://www.youtube.com/user/xoxxxoooxo',
+                'spotifylink' => 'https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ',
                 'piclink' => 'https://ondemand.nrj.be/Images/NRJVL/Nieuws/1200-1280/14528.jpg',
                 'created_at' => '2020-06-07 12:00:00'
             ]         
@@ -2222,6 +2227,7 @@ class AddDataTable extends Migration
                 'facebooklink' => 'https://www.facebook.com/ChiliPeppers/',
                 'twitterlink' => 'https://twitter.com/chilipeppers',
                 'youtubelink' => 'https://www.youtube.com/user/RHCPtv',
+                'spotifylink' => 'https://open.spotify.com/artist/0L8ExT028jH3ddEcZwqJJ5',
                 'piclink' => 'https://oor.nl/media/2020/02/211F073457A01C812A-1024x681-1.jpeg',
                 'created_at' => '2020-06-07 12:00:00'
             ]         
@@ -2236,6 +2242,7 @@ class AddDataTable extends Migration
                 'facebooklink' => 'https://www.facebook.com/calvinharris/',
                 'twitterlink' => 'https://twitter.com/calvinharris',
                 'youtubelink' => 'https://www.youtube.com/user/icreateddisco',
+                'spotifylink' => 'https://open.spotify.com/artist/7CajNmpbOovFoOoasH2HaY',
                 'piclink' => 'https://media.resources.festicket.com/www/artists/Calvin_Harris_Press_Shot.jpg',
                 'created_at' => '2020-06-07 12:00:00'
             ]         
@@ -2250,6 +2257,7 @@ class AddDataTable extends Migration
                 'facebooklink' => 'https://www.facebook.com/kendricklamar/',
                 'twitterlink' => 'https://twitter.com/kendricklamar',
                 'youtubelink' => 'https://www.youtube.com/user/KendrickLamarVEVO',
+                'spotifylink' => 'https://open.spotify.com/artist/7CajNmpbOovFoOoasH2HaY',
                 'piclink' => 'https://upload.wikimedia.org/wikipedia/commons/3/32/Pulitzer2018-portraits-kendrick-lamar.jpg',
                 'created_at' => '2020-06-07 12:00:00'
             ]         
@@ -2264,6 +2272,7 @@ class AddDataTable extends Migration
                 'facebooklink' => 'https://www.facebook.com/TaylorSwift',
                 'twitterlink' => 'https://twitter.com/taylorswift13',
                 'youtubelink' => 'https://www.youtube.com/taylorswift',
+                'spotifylink' => 'https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02',
                 'piclink' => 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Taylor_Swift_AMAs_2019.png',
                 'created_at' => '2020-06-07 12:00:00'
             ]         
@@ -2278,6 +2287,7 @@ class AddDataTable extends Migration
                 'facebooklink' => 'https://www.facebook.com/EdSheeranMusic',
                 'twitterlink' => 'https://twitter.com/edsheeran',
                 'youtubelink' => 'https://www.youtube.com/user/EdSheeran?app=desktop',
+                'spotifylink' => 'https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V',
                 'piclink' => 'https://images.nrc.nl/fBM49xCxkTQvApou87uvvltuay0=/1280x/filters:no_upscale()/s3/static.nrc.nl/bvhw/files/2019/07/data47075223-5788e1.jpg',
                 'created_at' => '2020-06-07 12:00:00'
             ]         
@@ -2287,7 +2297,6 @@ class AddDataTable extends Migration
                                 /* LYRICS WERKEN NIE */
         Song::insert(
             [
-                'id' => 1, 
                 'name' => 'Supermarket flowers', 
                 'artist_id' => 10, 
                 'genre_id' => 50, 
@@ -2338,7 +2347,607 @@ You're home
                 'created_at' => '2020-06-07 17:33:00'
             ]         
         );
+        Song::insert(
+            [
+                'name' => 'Trouble', 
+                'artist_id' => 1, 
+                'genre_id' => 1, 
+                'youtubelink' => 'lA-gGl6qihQ', 
+                'lyrics' => "
+Ooh, ooh
+Ooh, ooh, ooh
+Ooh, ooh, ooh
+Ooh, ooh
+Ooh, ooh, ooh
+Ooh, ooh, ooh
 
+Ooh, ooh
+Ooh, ooh
+Ooh, ooh, ooh
+Ooh, ooh
+Ooh, ooh, ooh
+
+We were at the table
+By the window with the view
+Casting shadows
+The sun was pushing through
+Spoke a lot of words
+I don't know if I spoke the truth
+
+Got so much to lose
+Got so much to prove
+God, don't let me lose my mind
+Trouble on my left, trouble on my right
+I been facing trouble almost all my life
+My sweet love, won't you pull me through?
+Everywhere I look I catch a glimpse of you
+I said it was love, and I did it for life
+Did-did it for you
+
+Ooh, ooh
+Ooh, ooh, ooh
+Ooh, ooh, ooh
+Ooh, ooh
+Ooh, ooh, ooh
+
+Will it come to pass, or will I pass the test?
+You know what they say, yeah
+The wicked get no rest
+You can have my heart, any place, any time
+
+Got so much to lose
+Got so much to prove
+God, don't let me lose my mind
+
+Trouble on my left, trouble on my right
+I been facing trouble almost all my life
+My sweet love, won't you pull me through?
+Everywhere I look, I catch a glimpse of you
+I said it was love, and I did it for life
+Did-did it for you
+
+Trouble on my left, trouble on my right
+I been facing trouble almost all my life
+My sweet love, won't you pull me through?
+Everywhere I look, I catch a glimpse of you
+I said it was love, and I did it for life
+Did-did it for you
+
+Ooh, ooh
+Ooh, ooh, ooh
+Ooh, ooh, ooh
+Ooh, ooh
+Ooh, ooh, ooh
+Ooh, ooh, ooh
+Ooh, ooh
+Ooh, ooh
+Ooh, ooh, ooh
+
+Got so much to lose
+Got so much to prove
+God, don't let me lose my mind
+                ",
+                'awards' => '', 
+                'created_at' => '2020-06-07 17:33:00'
+            ]         
+        );
+        Song::insert(
+            [
+                'name' => 'Memories', 
+                'artist_id' => 2, 
+                'genre_id' => 50, 
+                'youtubelink' => 'SlPhMPnQ58k', 
+                'lyrics' => "
+Here's to the ones that we got
+Cheers to the wish you were here, but you're not
+'Cause the drinks bring back all the memories
+Of everything we've been through
+Toast to the ones here today
+Toast to the ones that we lost on the way
+'Cause the drinks bring back all the memories
+And the memories bring back, memories bring back you
+
+There's a time that I remember, when I did not know no pain
+When I believed in forever, and everything would stay the same
+Now my heart feel like December when somebody say your name
+'Cause I can't reach out to call you, but I know I will one day, yeah
+
+Everybody hurts sometimes
+Everybody hurts someday, ayy ayy
+But everything gon' be alright
+Go and raise a glass and say, ayy
+
+Here's to the ones that we got
+Cheers to the wish you were here, but you're not
+'Cause the drinks bring back all the memories
+Of everything we've been through
+Toast to the ones here today
+Toast to the ones that we lost on the way
+'Cause the drinks bring back all the memories
+And the memories bring back, memories bring back you
+
+Doo doo, doo doo doo doo
+Doo doo doo doo, doo doo doo doo
+Doo doo doo doo, doo doo doo
+Memories bring back, memories bring back you
+
+There's a time that I remember when I never felt so lost
+When I felt all of the hatred was too powerful to stop (ooh, yeah)
+Now my heart feel like an ember and it's lighting up the dark
+I'll carry these torches for ya that you know I'll never drop, yeah
+
+Everybody hurts sometimes
+Everybody hurts someday, ayy ayy
+But everything gon' be alright
+Go and raise a glass and say, ayy
+
+Here's to the ones that we got (oh)
+Cheers to the wish you were here, but you're not
+'Cause the drinks bring back all the memories
+Of everything we've been through (no, no)
+Toast to the ones here today (ayy)
+Toast to the ones that we lost on the way
+'Cause the drinks bring back all the memories (ayy)
+And the memories bring back, memories bring back you
+
+Doo doo, doo doo doo doo
+Doo doo doo doo, doo doo doo doo
+Doo doo doo doo, doo doo doo
+Memories bring back, memories bring back you
+Doo doo, doo doo doo doo
+Doo doo doo doo, doo doo doo doo
+Doo doo doo doo, doo doo doo (ooh, yeah)
+Memories bring back, memories bring back you
+
+Yeah, yeah, yeah
+Yeah, yeah, yeah, yeah, yeah, doh, doh
+Memories bring back, memories bring back you
+                ",
+                'awards' => '', 
+                'created_at' => '2020-06-07 17:33:00'
+            ]         
+        );
+        Song::insert(
+            [
+                'name' => 'Own it', 
+                'artist_id' => 3, 
+                'genre_id' => 35, 
+                'youtubelink' => 'eYwbGaSurCQ', 
+                'lyrics' => "
+Own it, girl, you just own it
+'Cause your body's on fire
+Show me how to control it
+And go hit your spliff and get higher
+Girl, I love how you roll it
+I put my hand there, hold it
+I'ma be right by ya
+I'ma be right by ya
+I'ma be right by ya
+I'ma be right by ya
+
+Lighters up, lighters up
+One time, lighters up
+Pulled up in the party
+When you saw me I was lighting up my J
+So go ahead and brighten up my day
+Lighters in the air when you're lighting up the rave
+And it's feeling like I met you here before
+Girl, I felt your presence when they let you through the door
+Never had a bruddah give you everything and more
+So I take a little piece and the rest of it is yours
+Mi amor, I
+
+E don tey wey I don dey I tell you
+But, girl, you think say nah play
+I know no wetin you dey do me
+Because dey scatter my brain
+
+Thug loving when I put you in your place
+I can tell you love it just by looking in your face
+It's the way that you wind up your waist
+I'm so in awe, girl, you never have to worry 'bout nothing
+You know it's yours, you know you
+
+Own it, girl, you just own it
+'Cause your body's on fire
+Show me how to control it
+And go hit your spliff and get higher
+Girl, I love how you roll it
+I put my hand there, hold it
+I'ma be right by ya
+I'ma be right by ya
+I'ma be right by ya
+I'ma be right by ya
+
+Lights down for the one I love
+Right now, we never looked better
+Forget our friends, girl, I love it when we chill together
+And ain't nobody gonna feel how we feel together
+She wanna kiss, I, I want another one
+You got a sick vibe, I wanted more than one
+Up to now, nobody knew where I was coming from
+But we got the same mind
+So I don't wanna waste time, bring it to me
+My, my, that's what I need
+That's right, kissing your cheek
+One time
+I used to love being alone but now I can't stand it
+Reaching out my palm for you to put your hand in
+Girl, you are the one and I don't understand it
+How you lighting up the room with your glow?
+
+'Cause girl, you just own it, girl, you just own it
+'Cause your body's on fire
+Show me how to control it
+And go hit your spliff and get higher
+Girl, I love how you roll it
+I put my hand there, hold it
+I'ma be right by ya
+I'ma be right by ya
+I'ma be right by ya
+I'ma be right by ya
+
+I'ma be right by
+                ",
+                'awards' => '', 
+                'created_at' => '2020-06-07 17:33:00'
+            ]         
+        );
+        Song::insert(
+            [
+                'name' => 'Give me a minute', 
+                'artist_id' => 4, 
+                'genre_id' => 55, 
+                'youtubelink' => 'P0x8lvM5MvI', 
+                'lyrics' => "
+I should be old enough by now
+I love that you don't lie
+I try to be bold or chase it down
+Pursue it finally
+It's not that I don't appreciate
+I love that it's all mine
+But I'm not much use at playing safe
+I'll see this out
+And though I'm going away
+Then you'll get your break
+Leave with your head high
+You fought for it, you should be applauded.
+And it's okay to bleed but I bruise too easily
+And you can let yourself out
+I'm much too honest,
+Ahhh but I'm not sorry.
+I'll take my medicine
+You'll take the credit
+This thing could get the better of you if you let it
+Hold on I'm not finished, just give me a minute
+My everything looks so much nicer with you in it.
+And I could have sworn some things have changed
+We don't fit like we used to
+It's hard to ignore if it's worth the wait
+It might just fool you
+It's not that I don't appreciate
+How love it can choose you
+But I'm not much use at being fake
+I'll see this out
+And though I'm going away
+Then you'll get your break
+Leave with your head high
+You fought for it, you should be applauded.
+And it's okay to bleed but I bruise too easily
+And you can let yourself out
+I'm much too honest,
+Ahhh but I'm not sorry.
+I'll take my medicine
+You'll take the credit
+This thing could get the better of you if you let it
+Hold on I'm not finished, just give me a minute
+My everything looks so much nicer with you in it.
+And I can't remember how we got so wrapped up in it
+Hold I'm not finished just give me a minute
+I'm not finished
+And if you don't mind I can live with it
+Just a minute
+I'm not finished
+Would you be so kind just to forgive it
+I'll take my medicine
+You'll take the credit
+This thing could get the better of you if you let it
+Hold on I'm not finished just give me a minute
+                ",
+                'awards' => '', 
+                'created_at' => '2020-06-07 17:33:00'
+            ]         
+        );
+        Song::insert(
+            [
+                'name' => 'Blinding Lights', 
+                'artist_id' => 5, 
+                'genre_id' => 53, 
+                'youtubelink' => '4NRXx6U8ABQ', 
+                'lyrics' => "
+Yeah
+
+I been tryna call
+I been on my own for long enough
+Maybe you can show me how to love, maybe
+I'm going through withdrawals
+You don't even have to do too much
+You can turn me on with just a touch, baby
+
+I look around and Sin City's cold and empty (oh)
+No one's around to judge me (oh)
+I can't see clearly when you're gone
+
+I said, ooh, I'm blinded by the lights
+No, I can't sleep until I feel your touch
+I said, ooh, I'm drowning in the night
+Oh, when I'm like this, you're the one I trust
+Hey, hey, hey
+
+I'm running out of time
+'Cause I can see the sun light up the sky
+So I hit the road in overdrive, baby
+
+Oh, the city's cold and empty (oh)
+No one's around to judge me (oh)
+I can't see clearly when you're gone
+
+I said, ooh, I'm blinded by the lights
+No, I can't sleep until I feel your touch
+I said, ooh, I'm drowning in the night
+Oh, when I'm like this, you're the one I trust
+
+I'm just walking by to let you know (by to let you know)
+I can never say it on the phone (say it on the phone)
+Will never let you go this time (ooh)
+
+I said, ooh, I'm blinded by the lights
+No, I can't sleep until I feel your touch
+Hey, hey, hey
+
+Hey, hey, hey
+
+I said, ooh, I'm blinded by the lights
+No, I can't sleep until I feel your touch
+                ",
+                'awards' => '', 
+                'created_at' => '2020-06-07 17:33:00'
+            ]         
+        );
+        Song::insert(
+            [
+                'name' => 'Californication', 
+                'artist_id' => 6, 
+                'genre_id' => 1, 
+                'youtubelink' => 'YlUKcNNmywk', 
+                'lyrics' => "
+Psychic spies from China try to steal your mind's elation
+And little girls from Sweden dream of silver screen quotation
+And if you want these kind of dreams it's Californication
+
+It's the edge of the world and all of western civilization
+The sun may rise in the East at least it's settled in a final location
+It's understood that Hollywood sells Californication
+
+Pay your surgeon very well to break the spell of aging
+Celebrity skin is this your chin or is that war you're waging?
+
+Firstborn unicorn
+Hardcore soft porn
+Dream of Californication
+Dream of Californication
+Dream of Californication
+Dream of Californication
+
+Marry me girl, be my fairy to the world, be my very own constellation
+A teenage bride with a baby inside getting high on information
+And buy me a star on the boulevard, it's Californication
+
+Space may be the final frontier but it's made in a Hollywood basement
+And Cobain can you hear the spheres singing songs off Station To Station?
+And Alderaan's not far away, it's Californication
+
+Born and raised by those who praise, control of population
+Everybody's been there and I don't mean on vacation
+
+Firstborn unicorn
+Hardcore soft porn
+Dream of Californication
+Dream of Californication
+Dream of Californication
+Dream of Californication
+
+Destruction leads to a very rough road but it also breeds creation
+And earthquakes are to a girl's guitar, they're just another good vibration
+And tidal waves couldn't save the world from Californication
+
+Pay your surgeon very well to break the spell of aging
+Sicker than the rest, there is no test but this is what you're craving?
+
+Firstborn unicorn
+Hardcore soft porn
+Dream of Californication
+Dream of Californication
+Dream of Californication
+Dream of Californication
+                ",
+                'awards' => 'MTV Video Music Award for Best Direction', 
+                'created_at' => '2020-06-07 17:33:00'
+            ]         
+        );
+        Song::insert(
+            [
+                'name' => 'Summer', 
+                'artist_id' => 7, 
+                'genre_id' => 50, 
+                'youtubelink' => 'ebXbLfLACGM', 
+                'lyrics' => "
+When I met you in the summer
+To my heartbeat sound
+We fell in love
+As the leaves turned brown
+
+And we could be together baby
+As long as skies are blue
+You act so innocent now
+But you lied so soon
+When I met you in the summer
+
+When I met you in the summer
+To my heartbeat sound
+We fell in love
+As the leaves turned brown
+
+And we could be together baby
+As long as skies are blue
+You act so innocent now
+But you lied so soon
+When I met you in the summer
+
+Summer
+
+When I met you in the summer
+                ",
+                'awards' => '', 
+                'created_at' => '2020-06-07 17:33:00'
+            ]         
+        );
+        Song::insert(
+            [
+                'name' => 'Humble', 
+                'artist_id' => 8, 
+                'genre_id' => 35, 
+                'youtubelink' => 'tvTRZJ-4EyI', 
+                'lyrics' => "
+Nobody pray for me
+Even a day for me
+Way (yeah, yeah!)
+
+Ay, I remember syrup sandwiches and crime allowances
+Finesse a nigga with some counterfeits
+But now I'm countin' this
+Parmesan where my accountant lives
+In fact, I'm downin' this
+D'USSÉ with my boo bae, tastes like Kool-Aid for the analysts
+Girl, I can buy yo' ass the world with my paystub
+Ooh, that pussy good, won't you sit it on my taste bloods?
+I get way too petty once you let me do the extras
+Pull up on your block, then break it down: we playin' Tetris
+A.M. to the P.M., P.M. to the A.M., funk
+Piss out your per diem, you just gotta hate 'em, funk
+If I quit your BM, I still ride Mercedes, funk
+If I quit this season, I still be the greatest, funk
+My left stroke just went viral
+Right stroke put lil' baby in a spiral
+Soprano C, we like to keep it on a high note
+Its levels to it, you and I know, bitch, be humble
+
+sit down
+(Hol' up lil' bitch, hol' up lil' bitch) be humble
+(Hol' up, bitch) sit down
+(Sit down, hol' up, lil' bitch)
+Be humble (bitch)
+(Hol' up, hol' up, hol' up, hol' up) bitch, sit down
+Lil' bitch (hol' up, lil' bitch) be humble
+(Hol' up, bitch) sit down
+(Hol' up, hol' up, hol' up, hol' up) be humble
+(Hol' up, hol' up, hol' up, hol' up, lil' bitch) sit down
+(Hol' up lil' bitch) be humble
+(Hol' up, bitch) sit down
+(Hol' up, sit down, lil' bitch)
+(Sit down, lil' bitch, be humble)
+(Hol' up, hol' up, hol' up, hol' up, lil' bitch) bitch, sit down
+(Hol' up, bitch) be humble
+(Hol' up, bitch) sit down
+(Hol' up, hol' up, hol' up, hol' up)
+
+Who dat nigga thinkin' that he frontin' on man, man? (Man, man)
+Get the fuck off my stage, I'm the Sandman (Sandman)
+Get the fuck off my dick, that ain't right
+I make a play fuckin' up your whole life
+I'm so fuckin' sick and tired of the Photoshop
+Show me somethin' natural like afro on Richard Pryor
+Show me somethin' natural like ass with some stretchmarks
+Still will take you down right on your mama's couch in Polo socks, ay
+This shit way too crazy, ay, you do not amaze me, ay
+I blew cool from AC, ay, Obama just paged me, ay
+I don't fabricate it, ay, most of y'all be fakin', ay
+I stay modest 'bout it, ay, she elaborate it, ay
+This that Grey Poupon, that Evian, that TED Talk, ay
+Watch my soul speak, you let the meds talk, ay
+If I kill a nigga, it won't be the alcohol, ay
+I'm the realest nigga after all, bitch, be humble
+
+sit down
+(Hol' up lil' bitch, hol' up lil' bitch) be humble
+(Hol' up, bitch) sit down
+(Sit down, hol' up, lil' bitch)
+Be humble (bitch)
+(Hol' up, hol' up, hol' up, hol' up) bitch, sit down
+Lil' bitch (hol' up, lil' bitch) be humble
+(Hol' up, bitch) sit down
+(Hol' up, hol' up, hol' up, hol' up) be humble
+(Hol' up, hol' up, hol' up, hol' up, lil' bitch) sit down
+(Hol' up lil' bitch) be humble
+(Hol' up, bitch) sit down
+(Hol' up, sit down, lil' bitch)
+(Sit down, lil' bitch, be humble)
+(Hol' up, hol' up, hol' up, hol' up, lil' bitch) bitch, sit down
+(Hol' up, bitch) be humble
+(Hol' up, bitch) sit down
+(Hol' up, hol' up, hol' up, hol' up)
+                ",
+                'awards' => '', 
+                'created_at' => '2020-06-07 17:33:00'
+            ]         
+        );
+        Song::insert(
+            [
+                'name' => 'Lover', 
+                'artist_id' => 9, 
+                'genre_id' => 50, 
+                'youtubelink' => '-BjZmE2gtdo', 
+                'lyrics' => "
+We could leave the Christmas lights up 'til January
+This is our place, we make the rules
+And there's a dazzling haze, a mysterious way about you, dear
+Have I known you twenty seconds or twenty years?
+
+Can I go where you go?
+Can we always be this close forever and ever?
+And ah, take me out, and take me home
+You're my, my, my, my lover
+
+We could let our friends crash in the living room
+This is our place, we make the call
+And I'm highly suspicious that everyone who sees you wants you
+I've loved you three summers now, honey, but I want 'em all
+
+Can I go where you go?
+Can we always be this close forever and ever?
+And ah, take me out, and take me home (forever and ever)
+You're my, my, my, my lover
+
+Ladies and gentlemen, will you please stand?
+With every guitar string scar on my hand
+I take this magnetic force of a man to be my lover
+My heart's been borrowed and yours has been blue
+All's well that ends well to end up with you
+Swear to be overdramatic and true to my lover
+And you'll save all your dirtiest jokes for me
+And at every table, I'll save you a seat, lover
+
+Can I go where you go?
+Can we always be this close forever and ever?
+And ah, take me out, and take me home (forever and ever)
+You're my, my, my, my
+Oh, you're my, my, my, my
+Darling, you're my, my, my, my lover                
+                ",
+                'awards' => '', 
+                'created_at' => '2020-06-07 17:33:00'
+            ]         
+        );
 
         /* Concerten toevoegen */
         Concert::insert(
@@ -2365,6 +2974,246 @@ You're home
                 'ticketlink' => "www.google.be",
                 'ticket_status_id' => 1,
                 'created_at' => '2020-06-10 12:00:00'
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 1,
+                'location' => 'Slijk-Ewijk',
+                'country_id' => 156,
+                'date' => '2020-07-05 19:30:00',
+                'meetandgreet' => 0,
+                'merchandise' => 0,
+                'ticketlink' => "",
+                'ticket_status_id' => 1
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 2,
+                'location' => 'Boston',
+                'country_id' => 232,
+                'date' => '2020-06-28 23:00:00',
+                'meetandgreet' => 0,
+                'merchandise' => 1,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 2,
+                'location' => 'Toronto',
+                'country_id' => 38,
+                'date' => '2020-06-28 19:00:00',
+                'meetandgreet' => 0,
+                'merchandise' => 1,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 2,
+                'location' => 'Bogota',
+                'country_id' => 47,
+                'date' => '2021-03-14 19:00:00',
+                'meetandgreet' => 1,
+                'merchandise' => 0,
+                'ticketlink' => "",
+                'ticket_status_id' => 1,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 3,
+                'location' => 'London',
+                'country_id' => 231,
+                'date' => '2020-09-02 18:30:00',
+                'meetandgreet' => 0,
+                'merchandise' => 0,
+                'ticketlink' => "",
+                'ticket_status_id' => 1,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 3,
+                'location' => 'Dublin',
+                'country_id' => 105,
+                'date' => '2020-09-08 18:30:00',
+                'meetandgreet' => 0,
+                'merchandise' => 1,
+                'ticketlink' => "",
+                'ticket_status_id' => 1,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 4,
+                'location' => 'Dortmund',
+                'country_id' => 81,
+                'date' => '2020-09-23 20:00:00',
+                'meetandgreet' => 0,
+                'merchandise' => 0,
+                'ticketlink' => "",
+                'ticket_status_id' => 1,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 4,
+                'location' => 'Zürich',
+                'country_id' => 213,
+                'date' => '2020-09-28 20:00:00',
+                'meetandgreet' => 0,
+                'merchandise' => 0,
+                'ticketlink' => "",
+                'ticket_status_id' => 1,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 5,
+                'location' => 'Paris',
+                'country_id' => 73,
+                'date' => '2020-09-28 20:00:00',
+                'meetandgreet' => 1,
+                'merchandise' => 0,
+                'ticketlink' => "",
+                'ticket_status_id' => 1,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 6,
+                'location' => 'Athens',
+                'country_id' => 85,
+                'date' => '2020-06-025 20:00:00',
+                'meetandgreet' => 0,
+                'merchandise' => 1,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 6,
+                'location' => 'Florence',
+                'country_id' => 107,
+                'date' => '2020-06-27 16:20:00',
+                'meetandgreet' => 1,
+                'merchandise' => 1,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 6,
+                'location' => 'Tel-Aviv',
+                'country_id' => 106,
+                'date' => '2020-07-10 17:00:00',
+                'meetandgreet' => 1,
+                'merchandise' => 1,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 7,
+                'location' => 'Budapest',
+                'country_id' => 98,
+                'date' => '2020-08-05 17:00:00',
+                'meetandgreet' => 0,
+                'merchandise' => 0,
+                'ticketlink' => "",
+                'ticket_status_id' => 1,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 7,
+                'location' => 'Budapest',
+                'country_id' => 98,
+                'date' => '2020-07-10 20:00:00',
+                'meetandgreet' => 1,
+                'merchandise' => 1,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 8,
+                'location' => 'Rotselaar',
+                'country_id' => 21,
+                'date' => '2020-07-02 16:00:00',
+                'meetandgreet' => 0,
+                'merchandise' => 1,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 8,
+                'location' => 'Stockholm',
+                'country_id' => 212,
+                'date' => '2020-06-26 16:30:00',
+                'meetandgreet' => 0,
+                'merchandise' => 0,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 8,
+                'location' => 'Oslo',
+                'country_id' => 166,
+                'date' => '2020-06-27 15:00:00',
+                'meetandgreet' => 0,
+                'merchandise' => 0,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 8,
+                'location' => 'Gdynia',
+                'country_id' => 177,
+                'date' => '2020-05-31 21:00:00',
+                'meetandgreet' => 0,
+                'merchandise' => 1,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 9,
+                'location' => 'Werchter',
+                'country_id' => 21,
+                'date' => '2020-06-20 16:00:00',
+                'meetandgreet' => 0,
+                'merchandise' => 1,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
+            ]         
+        );
+        Concert::insert(
+            [
+                'artist_id' => 9,
+                'location' => 'Sao Paulo',
+                'country_id' => 30,
+                'date' => '2020-06-18 18:00:00',
+                'meetandgreet' => 0,
+                'merchandise' => 0,
+                'ticketlink' => "",
+                'ticket_status_id' => 4,
             ]         
         );
         

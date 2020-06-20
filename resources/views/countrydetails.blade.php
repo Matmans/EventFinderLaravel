@@ -19,7 +19,7 @@
                             Artists
                         </div>
                         @if(count($artist) == 0)
-                            <h3 class="errortitle text-center">This country has no registered artists yet. Sad!</h3>
+                            <h3 class="errortitle text-center">This country has no registered artists yet.</h3>
                         @else
                             @foreach($artist as $a)
                                 <div class="card flex-row flex-wrap mb-3" style="width:100%;">
@@ -33,9 +33,10 @@
                                         <a href="/artist/{{$a->id}}">
                                             <h4 class="card-title">{{$a->name}}</h4>
                                         </a>
-                                        <a href="{{$a->facebooklink}}"><img src="../img/facebook.png" class="medialogo"></a>
-                                        <a href="{{$a->twitterlink}}"><img src="../img/twitter.png" class="medialogo ml-3"></a>
-                                        <a href="{{$a->youtubelink}}"><img src="../img/youtube.png" class="medialogo ml-3"></a>
+                                        <a href="{{$a->facebooklink}}" target="_blank"><img src="../img/facebook.png" class="medialogo"></a>
+                                        <a href="{{$a->twitterlink}}" target="_blank"><img src="../img/twitter.png" class="medialogo ml-3"></a>
+                                        <a href="{{$a->youtubelink}}" target="_blank"><img src="../img/youtube.png" class="medialogo ml-3"></a>
+                                        <a href="{{$a->spotifylink}}" target="_blank"><img src="../img/spotify.png" class="medialogo ml-3"></a>
                                     </div>
                                     <div class="w-100"></div>
                                     <div class="card-footer w-100 text-muted">

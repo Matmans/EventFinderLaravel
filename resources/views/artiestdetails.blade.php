@@ -29,12 +29,13 @@
                             </a>
                         </li>
                         <li class="list-group-item">
-                            Genre: {{$artist->genre['name']}}
+                            Genre: <a href="/genre/{{$artist->genre['id']}}">{{$artist->genre['name']}}</a>
                         </li>
                         <li class="list-group-item">
                             <a href="{{$artist->facebooklink}}" target="_blank"><img src="../img/facebook.png" class="medialogo"></a>
                             <a href="{{$artist->twitterlink}}" target="_blank"><img src="../img/twitter.png" class="medialogo ml-3"></a>
                             <a href="{{$artist->youtubelink}}" target="_blank"><img src="../img/youtube.png" class="medialogo ml-3"></a>
+                            <a href="{{$artist->spotifylink}}" target="_blank"><img src="../img/spotify.png" class="medialogo ml-3"></a>
                         </li>
                     </ul> 
                     <!-- Hierin komen de buttons voor favorieten toe te voegen en verwijderen, alleen als gebruiker is ingelogd -->

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 use App\User;
 use App\Concert;
 use App\Concert_wishlist;
@@ -39,7 +40,7 @@ class Concert_wishlistController extends Controller
                         /* Check of concert nog niet in de list zit*/
                         $Concert_wishlist = Concert_wishlist::where('user_id',$currentuserid)->where('concert_id',$concert_id)->first();
                         /* Als deze er niet in zit, toevoegen */
-                        if (empty($favconcert))
+                        if (empty($Concert_wishlist))
                         {
                             $Concert_wishlist = new Concert_wishlist;
 
@@ -149,6 +150,40 @@ class Concert_wishlistController extends Controller
         /* Algemene error catch */
         } catch (\exception $e) {
             $reason = "Something went wrong";
+            return view('/error', 
+            [
+                'reason' => $reason,
+            ]);
+        }
+    }
+
+    public function past() {
+        try {
+            if (Auth::check())
+            {
+                $currentuserid = Auth::user()->id;
+
+                $concert_wishlist_past = Concert_wishlist::where('user_id',$currentuserid)
+                    ->join('concert', 'concert_id', '=', 'concert.id')
+                    ->where('date','<', Carbon::now())
+                    ->orderBy('date')
+                    ->get();
+
+                return view('/pastconcert', 
+                [
+                    'concert_wishlist_past' => $concert_wishlist_past,
+                ]);
+            }
+            else 
+            {
+                $reason = "You need to be logged in to view this page.";
+                return view('/error', 
+                [
+                    'reason' => $reason,
+                ]);
+            }
+        } catch (\exception $e) {
+            $reason = "Something went wrong. Please try again.";
             return view('/error', 
             [
                 'reason' => $reason,

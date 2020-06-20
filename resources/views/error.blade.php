@@ -8,7 +8,7 @@
         <form action="/" method="GET" role="search">
             <div class="input-group active-cyan-3 active-cyan-4 justify-content-center">
                 <span class="input-group-btn">
-                    <button type="submit" class="btn btn-warning mr-5 btn-lg pl-5 pr-5">
+                    <button type="submit" class="btn btn-warning btn-lg">
                         Search again
                     </button>
                 </span>

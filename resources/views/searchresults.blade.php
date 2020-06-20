@@ -1,9 +1,11 @@
 @extends('layout.layout')
 @section('content')
 <div class="container text-white">
-    <div class="row">
-        <h1>Looks like we've found multiple results</h1>
-        <h2>Select an artist and/or country and try again!</h2>
+    <div class="row justify-content-center text-center mb-1 mt-5">
+        <h1 id="tussentitel">Looks like we've found multiple results</h1>
+    </div>
+    <div class="row justify-content-center text-center mb-4">
+        <h2 id="tussentitel">Select an artist and/or country and try again!</h2>
     </div>
     <form action="/searchconcert" method="POST" role="search">
         {{ csrf_field() }}
@@ -38,10 +40,11 @@
                         @endforeach
                     </select>
                 </div>
+                <button type="submit" class="btn btn-warning btn-block">SEARCH</button>
             </div>
         </div>
         <div class="row">
-            <button type="submit" class="btn btn-warning btn-block">SEARCH</button>
+
         </div>
     </form>
 </div>

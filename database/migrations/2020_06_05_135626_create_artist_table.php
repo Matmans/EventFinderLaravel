@@ -23,6 +23,7 @@ class CreateArtistTable extends Migration
             $table->string('facebooklink',120);
             $table->string('twitterlink',120);
             $table->string('youtubelink',120);
+            $table->string('spotifylink',120);
             $table->string('piclink');
             $table->timestamps();
         });

@@ -21,6 +21,12 @@
                     <!-- Algemene info -->
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
+                            <a href="{{$artist->facebooklink}}" target="_blank"><img src="../img/facebook.png" class="medialogo"></a>
+                            <a href="{{$artist->twitterlink}}" target="_blank"><img src="../img/twitter.png" class="medialogo ml-3"></a>
+                            <a href="{{$artist->youtubelink}}" target="_blank"><img src="../img/youtube.png" class="medialogo ml-3"></a>  
+                            <a href="{{$artist->spotifylink}}" target="_blank"><img src="../img/spotify.png" class="medialogo ml-3"></a>               
+                        </li>
+                        <li class="list-group-item">
                             Formation: {{$artist['formation']}}
                         </li>
                         <li class="list-group-item">
@@ -107,14 +113,14 @@
                                     Time: {{date('G:i', strtotime($c->date))}} <br/>
                                     <!-- Check voor meet and greet -->
                                     @if($c->meetandgreet == 1)
-                                        Meet and greet: &check; <br/>
+                                        Meet and greet: <span style="color:green;">&check;</span> <br/>
                                     @else
                                         Meet and greet: &#10060; <br/>
                                     @endif
                                     
                                     <!-- Check voor merchandise -->
                                     @if($c->merchandise == 1)
-                                        Merch: &check;
+                                        Merch: <span style="color:green;">&check; </span>
                                     @else
                                         Merch: &#10060;
                                     @endif

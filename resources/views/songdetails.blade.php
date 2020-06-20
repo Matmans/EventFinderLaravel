@@ -22,7 +22,14 @@
                 </div>
             </div>
             <div class="col-sm-2 mt-3 pb-3 d-flex flex-column text-right">
-                <!-- Opvul kolom -->
+                <div class="h5 text-center mt-5 display-2 songdetails">
+                    Genre: <a href="/genre/{{$song->genre['id']}}">{{$song->genre['name']}}</a> <br/><br/>
+                    @if(empty($song->awards))
+                        Geen awards
+                    @else
+                        Awards: {{$song->awards}}
+                    @endif
+                </div>
             </div>
         </div>
         <div class="row text-white align-self-center">

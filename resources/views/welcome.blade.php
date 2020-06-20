@@ -12,11 +12,15 @@
             <div class="form-group">
                 <!-- Dit geeft de artiest naam mee -->
                 <div class="input-group active-cyan-3 active-cyan-4 pr-5 pl-5">
-                <input type="text" class="form-control" name="zoek" placeholder="Search here for an artist"> <br/>
+                    <input type="text" class="form-control" name="zoek" placeholder="Search here for an artist"> <br/>
+                </div>
             </div>
             <div class="form-group row justify-content-center">
                 <!-- Hiermee kunnen ze filteren op basis van land -->
                 <!-- Als alleen een land is aangeduid, tonen we de pagina van dat land -->
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Country</label>
+                </div>
                 <select class="form-control" name="zoekcountry" id="zoekcountry" style="width:30%;">
                     <option value="0">Filter by country</option>
                     @foreach($country as $c)
@@ -26,8 +30,8 @@
             </div>
             <div class="form-group">
                 <span class="input-group-btn">
-                    <button type="submit" class="btn btn-warning mr-5 btn-lg pl-5 pr-5">
-                    Search
+                    <button type="submit" class="btn btn-warning btn-lg" style="width:35%;">
+                        Search
                     </button>
                 </span>
             </div>
